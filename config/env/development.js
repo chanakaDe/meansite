@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: 'mongodb://localhost/mean-dev',
+    db: 'mongodb://localhost/meansite',
     app: {
         name: 'MEAN.io - A Fullstack Javascript Framework'
     },
