@@ -10,7 +10,7 @@
 		</div>
 			<h2>Getting Started</h2>
 			<div class="inner-link-anchor" id="howitworks"></div>
-			<h3>How It works</h3>	
+			<h3>How It works</h3>
 			<ol>
 				<li>The Browser connects to the desired url which is in the form of http://localhost:3000 (if you're in a development environment) or the site name.<br/> The Connection is handled by Express which uses the <a href="https://github.com/visionmedia/consolidate.js/">consolidate.js library</a> to render the server side application markup (the default templating engine is <a href="http://paularmstrong.github.io/swig/">swig</a>).
 				</li>
@@ -82,13 +82,13 @@ config
 			<div class="inner-link-anchor" id="grunt"></div>
 			<h3>Grunt</h3>
 			<p>Grunt is a great tool for automating your JavaScript tasks. The ecosystem is huge, containing many common tasks you can use in your daily development process.</p>
-			<p>To configure grunt you start with the gruntfile.js file, where you define the tasks you want to run. 
+			<p>To configure grunt you start with the gruntfile.js file, where you define the tasks you want to run.
 			We start with two basic tasks:</p>
 			<ol>
 				<li>task 1</li>
 				<li>task 2</li>
 			</ol>
-			
+
 
 <h4>Default</h4>
 <p>The default task is the task that runs when you type 'grunt' in your command-line, the default task consists of three sub-tasks:
@@ -112,35 +112,8 @@ config
 <li><strong>karma:unit</strong></li> This uses the karma test runner to run the AngularJS unit tests.
 </ol>
 
-<h2>Frequently Asked Questions</h2>
-<div class="inner-link-anchor" id="faq"></div>
-<ol>
-<li><h3>"Error: failed to connect to [localhost:27017]"</h3>
 
-MongDB isn't running, please run it before you run grunt...
-Consider MongoDB a program that needs to be running before you can run grunt on your MEAN project.
-Follow these instructions here for mongodb installation:
-http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/ Manual Installation is the only manner I could get things working
-
-I also needed to be in /usr/local/bin before I could fire mongod Once mongod is running in your terminal window, open a different terminal window and cd to the directory where your MEAN project is located.
-
-There you can run a grunt command and avoid the dreaded warning: [nodemon] app crashed - waiting for file changes before starting...
-
-At that point, you can navigate to http://localhost:3000
-</li>
-
-<li><h3>"I run grunt but see a white screen with nothing in it"</h3>
-Either you havn't run npm install or it in turn did not trigger bower install
-</li>
-<li><h3>"I run grunt as documented but get a command line not found"</h3>
-Install grunt-cli globally - npm install grunt-cli -g
-</li>
-<li><h3>"I get Error: EMFILE, too many open files” in npm install."</h3>
-See http://otaqui.com/blog/1618/how-to-fix-error-emfile-too-many-open-files-from-yeoman-and-npm/
-or - set your ulimit higher if your using a mac ulimit -n 1024
-</li>
 
 		</section><!-- end of cold-md-10 -->
 	</section> <!-- end of container -->
 </section> <!-- end of content -->
-

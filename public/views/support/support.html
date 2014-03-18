@@ -9,7 +9,7 @@
 			<img src="http://meanleanstartupmachine.com/img/success.jpg"></img>
 		</div>
 			<h2>Community Support</h2>
-			<h3>Facebook</h3>	
+			<h3>Facebook</h3>
 			<p>We have a grpoup that hangs around in facebook discussing various mean oriented topics and just having direct non-formal communiction</p>
 			Join us at the <a href="https://www.facebook.com/groups/mean.io/">mean.io facebook group</a>
 			<div class="inner-link-anchor" id="facebook"></div>
@@ -22,7 +22,6 @@
 			<p>For issues, bugs and pull-requests (bring it on!) open an issue in our <a href="http://github.com/linnovate/mean">github repository</a></p>
 			<div class="inner-link-anchor" id="github"></div>
 
-			
 			<h2>Commercial Support</h2>
 			<p>We at <a href="http://linnovate.net">Linnovate</a> have developed mean.io initially to scratch our own itch but now to help developers and organizations around the work - <strong>GET MEAN.</strong></p>
 			We provide the following services..
@@ -40,8 +39,36 @@
 			<h3>Coming Soon! - MEAN Hosting</h3>
 			<div class="inner-link-anchor" id="hosting"></div>
 			<p>We provide affordable, secure and scalable web hosting of mean apps - coming soon!</p>
-			
+
+
+<h2>Frequently Asked Questions</h2>
+<div class="inner-link-anchor" id="faq"></div>
+<ol>
+<li><h3>"Error: failed to connect to [localhost:27017]"</h3>
+
+MongDB isn't running, please run it before you run grunt...
+Consider MongoDB a program that needs to be running before you can run grunt on your MEAN project.
+Follow these instructions here for mongodb installation:
+http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/ Manual Installation is the only manner I could get things working
+
+I also needed to be in /usr/local/bin before I could fire mongod Once mongod is running in your terminal window, open a different terminal window and cd to the directory where your MEAN project is located.
+
+There you can run a grunt command and avoid the dreaded warning: [nodemon] app crashed - waiting for file changes before starting...
+
+At that point, you can navigate to http://localhost:3000
+</li>
+
+<li><h3>"I run grunt but see a white screen with nothing in it"</h3>
+Either you havn't run npm install or it in turn did not trigger bower install
+</li>
+<li><h3>"I run grunt as documented but get a command line not found"</h3>
+Install grunt-cli globally - npm install grunt-cli -g
+</li>
+<li><h3>"I get Error: EMFILE, too many open files” in npm install."</h3>
+See http://otaqui.com/blog/1618/how-to-fix-error-emfile-too-many-open-files-from-yeoman-and-npm/
+or - set your ulimit higher if your using a mac ulimit -n 1024
+</li>
+</ol>
 		</section><!-- end of cold-md-10 -->
 	</section> <!-- end of container -->
 </section> <!-- end of content -->
-
