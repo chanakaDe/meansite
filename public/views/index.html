@@ -5,7 +5,7 @@
             <div class="banner-top-titles">
                 <h1 class="banner-top-title">The Friendly & Fun Javascript Fullstack <br>
                  for your next web application</h1>
-                <h4 class="banner-top-subtitle">MEAN is a fullstack javascript platform for modern web applications.</h4>
+                <h4 class="banner-top-subtitle">MEAN is an opinionated fullstack javascript framework -<br>which simplifies and accelerates web application development.</h4>
                 <a href="https://github.com/linnovate/mean/zipball/master" class="banner-top-download-button">Download Now</a>
             </div>
         </div>
@@ -83,12 +83,8 @@
 -->
             <div class="block tweets">
                 <h2 class="block-title iconTwitter">#Mean Tweets</h2>
-                <div class="block-content">
-        					<div ng-show="twitterShow">
-
-<a class="twitter-timeline" href="https://twitter.com/search?q=mean.io" data-widget-id="437719172768739328">Tweets about "mean.io"</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-									</div>
+                <div>
+                  <div data-ng-include src="'views/twitter.html'">x</div>
                 </div>
             </div>
         </aside>
@@ -96,4 +92,3 @@
 		</div>
 </section>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
