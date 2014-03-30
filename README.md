@@ -26,20 +26,15 @@ $ npm install -g bower
 * UI Bootstrap - Defined as bower module in the [bower.json](bower.json) file.
 
 ## Quick Install
-  The quickest way to get started with MEAN is to clone the project and utilize it like this:
+  The quickest way to get started with MEAN is to ..
 
-  Install dependencies:
+    $ sudo npm install -g meanio   # get the cli
+    $ mean init appName            # create the first app
+    $ cd appName && npm install    # Install dependencies
+    $ mean package myModule        # Scaffold you're own module
+    $ mean install mean-tokens     # Or download one from our repo...
+    $ grunt                        # Run you App.
 
-    $ npm install
-
-  We recommend using [Grunt](https://github.com/gruntjs/grunt-cli) to start the server:
-
-    $ grunt
-    
-  When not using grunt you can use:
-
-    $ node server
-    
   Then open a browser and go to:
 
     http://localhost:3000
@@ -81,7 +76,7 @@ Bower Clean Cache:
 $ bower cache clean
 ```
 
- 
+
 ## Configuration
 All configuration is specified in the [config](config/) folder, particularly the [config.js](config/config.js) file and the [env](config/env/) files. Here you will need to specify your application name, database name, as well as hook up any social app keys if you want integration with Twitter, Facebook, GitHub or Google.
 

@@ -24,9 +24,10 @@
 			<p class="alert alert-danger">Make sure mongodb is installed and running on port 27017 before you start</p>
 			<p>To startup with MEAN follow the next step:</p>
 			<ol>
-				<li>Use git to clone the repository</li><pre><code>git clone http://github.com/linnovate/mean.git</code></pre>
-				<li>Enter the subdirectory that was created: <pre><code>cd mean</code></pre></li>
-				<li>Install MEAN.IO's dependencies by running:<pre><code> npm install</code></pre></li>
+				<li>Get the mean cmdline</li><pre><code>sudo npm install -g meanio</code></pre>
+				<li>Create you first app<pre><code>mean init myApp</code></pre></li>
+				<li>Install MEAN.IO's dependencies by running...<pre><code>cd myApp && npm install</code></pre></li>
+				<li>Scaffold your first module<pre><code>mean package myModule</pre></code></li>
 				<li>To launch mean run: <pre><code>grunt</code></pre></li>
 			</ol>
 <h2>Directory Structure</h2>
