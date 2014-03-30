@@ -33,14 +33,15 @@
 <h2>Directory Structure</h2>
 <div class="inner-link-anchor" id="server"></div>
 <h3>Server Side</h3>
-<p>All of the Server side code resides in the <strong>/app</strong> directory.</p>
+<p>All of the Server side code resides in the <strong>/server</strong> directory.</p>
 
 <pre>
-app
---- controllers
---- models
---- routes
---- views
+server
+--- config						# see below
+--- controllers			 # Server side logic goes here
+--- models						# strcuture goes here
+--- routes						# rest api endpoints routing - here
+--- views						 # swig based html rendering - here
 </pre>
 
 <div class="inner-link-anchor" id="client"></div>
@@ -49,19 +50,26 @@ app
 
 <pre>
 public
---- css
---- img
---- js
---- lib
---- views
+--- articles
+--- auth
+--- system
+---- assets
+---- controllers
+---- lib
+---- routes
+---- services
+---- views
 </pre>
 
 <div class="inner-link-anchor" id="config"></div>
 <h3>Configuration</h3>
-<p>All the configuration code resides in the <strong>/config</strong> directory.  Different environment configurations (testing, development, production) can be defined within the <strong>env</strong> directory.</p>
+<p>All the configuration code resides in the <strong>server/config</strong> directory.  Different environment configurations (testing, development, production) can be defined within the <strong>env</strong> directory.</p>
 <pre>
 config
 --- env
+---- all.js
+---- development.js
+
 --- config.js
 --- express.js
 --- passport.js
