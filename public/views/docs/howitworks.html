@@ -1,0 +1,12 @@
+<div class="infograph">
+    <img src="/img/infographics/howitworks.png"></img>
+</div>
+<h2>Getting Started</h2>
+<h3>How It works</h3>
+<ol>
+    <li>The Browser connects to the desired url which is in the form of http://localhost:3000 (if you're in a development environment) or the site name.
+        <br/>The Connection is handled by Express which uses the <a href="https://github.com/visionmedia/consolidate.js/">consolidate.js library</a> to render the server side application markup (the default templating engine is <a href="http://paularmstrong.github.io/swig/">swig</a>).
+    </li>
+    <li>Page is returned to browser - The page rendered contains the inclusion of the angular.js library(among others). The markup contains an "ng-view" tag which is where the angular app initializes.
+    </li>
+</ol>
