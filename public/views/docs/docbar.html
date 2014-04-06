@@ -1,19 +1,21 @@
 <nav class="nav-docs" role="complementary">
-
-<h3 class="first"><a data-ng-click="changeView('getting-started','howitworks')">Getting Started</a></h3>
-		<ul class="nav nav-pills nav-stacked">
-			<li><a data-ng-click="changeView('getting-started','howitworks')" data-ng-animate=" 'slide' ">How it works</a></li>
-			<li><a data-ng-click="changeView('getting-started','qinstall')" data-ng-animate=" 'slide' ">Quick Install</a></li>
-			<li><a data-ng-click="changeView('getting-started','prereq')">Prerequisites</a></li>
-			<li><a data-ng-click="changeView('getting-started','technologies')">Technologies</a></li>
-		</ul>
-<h3>Overview</h3>
+<accordion close-others="true">
+ <accordion-group data-ng-click="changeView('getting-started','howitworks')" heading="Getting Started" is-open="true">
+	<ul class="nav nav-pills nav-stacked">
+		<li><a data-ng-click="changeView('getting-started','howitworks')" data-ng-animate=" 'slide' ">How it works</a></li>
+		<li><a data-ng-click="changeView('getting-started','qinstall')" data-ng-animate=" 'slide' ">Quick Install</a></li>
+		<li><a data-ng-click="changeView('getting-started','prereq')">Prerequisites</a></li>
+		<li><a data-ng-click="changeView('getting-started','technologies')">Technologies</a></li>
+	</ul>
+</accordion-group>
+<accordion-group data-ng-click="changeView('overview','system')" heading="Overview" is-open="false">
 	<ul class="nav nav-pills nav-stacked">
 		<li><a data-ng-click="changeView('overview','system')">System</a></li>
 		<li><a data-ng-click="changeView('overview','auth')">Auth</a></li>
 		<li><a data-ng-click="changeView('overview','articles')">Articles</a></li>
 	</ul>
-<h3>Server Side</h3>
+</accordion-group>
+<accordion-group data-ng-click="changeView('overview','system')" heading="Server Side" is-open="false">
 	<ul class="nav nav-pills nav-stacked">
 		<li><a data-ng-click="changeView('server','swig')">Swig/views</a></li>
 		<li><a data-ng-click="changeView('server','autoload')">Autoloaded files</a></li>
@@ -22,7 +24,8 @@
 		<li><a data-ng-click="changeView('server','datamodels')">Data models</a></li>
 		<li><a data-ng-click="changeView('server','mocha')">Testing (Mocha)</a></li>
 	</ul>
-<h3>Client Side</h3>
+</accordion-group>
+<accordion-group data-ng-click="changeView('client','controllers')" heading="Client Side" is-open="false">
 	<ul class="nav nav-pills nav-stacked">
 		<li><a data-ng-click="changeView('client','controllers')">Controllers</a></li>
 		<li><a data-ng-click="changeView('client','views')">Views</a></li>
@@ -31,7 +34,8 @@
 		<li><a data-ng-click="changeView('client','filters')">Filters</a></li>
 		<li><a data-ng-click="changeView('client','karma')">Testing (Karma)</a></li>
 	</ul>
-<h3>CLI Reference</h3>
+</accordion-group>
+<accordion-group data-ng-click="changeView('cli','scaffolding')" heading="CLI Reference" is-open="false">
 	<ul class="nav nav-pills nav-stacked">
 		<li><a data-ng-click="changeView('cli','scaffolding')">Scaffolding</a></li>
 		<li><a data-ng-click="changeView('cli','modules')">Modules</a></li>
@@ -40,6 +44,8 @@
 		<li><a data-ng-click="changeView('cli','status')">Status</a></li>
 		<li><a data-ng-click="changeView('cli','users')">Users</a></li>
 	</ul>
+</accordion-group>
+
 <h3>Tools</h3>
 	<ul class="nav nav-pills nav-stacked">
 		<li><a href="" data-ng-click="changeView('npm')">NPM</a></li>
@@ -116,4 +122,6 @@ Common problems/ Troubleshooting
 			</li>
 -->
 		</ul>
+</accordion>
+
 	</nav>

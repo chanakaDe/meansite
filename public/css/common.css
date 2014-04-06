@@ -200,3 +200,7 @@ margin-bottom:100px;
 .slide-enter .slide-enter-active {
 	opacity: 1;
 }
+
+#docs .panel-group {
+	width: 175px;
+}
