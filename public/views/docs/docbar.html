@@ -1,8 +1,16 @@
 <nav class="nav-docs" role="complementary">
-<h3 class="first">Getting Started</h3>
+
+
+
+
+
+
+<h4>
+<h3 class="first"><a data-ng-click="changeView('getting-started')">Getting Started</a></h3>
 		<ul class="nav nav-pills nav-stacked">
-			<li><a data-ng-click="changeView('howitworks')">How It Works</a></li>
-			<li><a data-ng-click="changeView('installation')">Installation</a></li>
+			<li><a data-ng-click="changeView('getting-started','qinstall')">Quick Install</a></li>
+			<li><a data-ng-click="changeView('getting-started','prereq')">Prerequisites</a></li>
+			<li><a data-ng-click="changeView('getting-started','technologies')">Technologies</a></li>
 		</ul>
 <h3>Directory structure</h3>
 	<ul class="nav nav-pills nav-stacked">
@@ -23,6 +31,58 @@
 		<li><a href="http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman">AddyOsmani</a></li>
 		<li><a href="http://javascriptjabber.com/092-jsj-the-mean-stack-with-ward-bell-and-valeri-karpov/">JS Jabber (audio)</li>
 	</ul>
+
+Technologies
+Annotated first experienced
+Overview
+	Directory Structure
+		system
+		auth
+		articles
+Server Side
+	swig/views
+	autoloaded files
+	routing
+	static files
+	data models
+	tests (mocha)
+Client Side
+	Controllers
+	Views
+	Directives
+	Services
+	Filters
+	tests (karma)
+CLI Reference
+	scaffolding
+	modules
+	docs
+	packages
+	status
+	users
+Modules
+	Overview
+	your first module
+	Using modules
+	create modules
+	file structure
+	adding menus
+	adding routes
+	css/js
+	using settings
+	module dependencies
+	publishing modules
+Assests
+Permission
+Best Practicies / Design principles
+	API module
+	Client + Server Module
+	Server only Module
+Getting Ready for production
+Dependencies
+Security
+Performance
+Common problems/ Troubleshooting
 
 <!--
 <h3>Best Practices</h3>

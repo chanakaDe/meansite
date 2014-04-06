@@ -1,0 +1,43 @@
+<div class="infograph">
+    <img src="/img/infographics/howitworks.png"></img>
+</div>
+<h2>Getting Started</h2>
+<h3 id="howitworks">How It works</h3>
+<ol>
+    <li>The Browser connects to the desired url which is in the form of http://localhost:3000 (if you're in a development environment) or the site name.
+        <br/>The Connection is handled by Express which uses the <a href="https://github.com/visionmedia/consolidate.js/">consolidate.js library</a> to render the server side application markup (the default templating engine is <a href="http://paularmstrong.github.io/swig/">swig</a>).
+    </li>
+    <li>Page is returned to browser - The page rendered contains the inclusion of the angular.js library(among others). The markup contains an "ng-view" tag which is where the angular app initializes.
+    </li>
+</ol>
+
+<h3 id="qinstall">Installation</h3>
+<div class="inner-link-anchor" id="installation"></div>
+<p class="alert alert-danger">Make sure mongodb is installed and running on port 27017 before you start</p>
+<p>To startup with MEAN follow the next step:</p>
+<ol>
+    <li>Get the mean cmdline</li>
+    <pre>
+        <code>sudo npm install -g meanio</code>
+    </pre>
+    <li>Create you first app
+        <pre>
+            <code>mean init myApp</code>
+        </pre>
+    </li>
+    <li>Install MEAN.IO's dependencies by running...
+        <pre>
+            <code>cd myApp && npm install</code>
+        </pre>
+    </li>
+    <li>Scaffold your first module
+        <pre>
+            <code>mean package myModule</pre>
+        </code>
+    </li>
+    <li>To launch mean run:
+        <pre>
+            <code>grunt</code>
+        </pre>
+    </li>
+</ol>
