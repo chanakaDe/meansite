@@ -1,11 +1,15 @@
 'use strict';
 
-angular.module('mean.system').controller('DocsController', ['$scope', '$window',
-    function($scope, $window) {
-	$scope.height = $window.innerHeight-180;
-	$scope.view = 'howitworks';
-	$scope.changeView = function(name){
-		$scope.view = name;
-	}
-}
+angular.module('mean.system').controller('DocsController',
+  ['$scope', '$window','$location','$anchorScroll',
+  function( $scope, $window, $location, $anchorScroll) {
+//	$scope.height = $window.innerHeight ;
+//  console.log($window.inner)
+	  $scope.view = 'getting-started';
+	  $scope.changeView = function(name, anchor){
+      $location.hash(anchor);
+      $scope.view = name;
+      $anchorScroll();
+	  }
+  }
 ]);
