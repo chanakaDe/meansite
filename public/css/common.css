@@ -188,5 +188,15 @@ margin-bottom:100px;
 
 #docs .nav-docs h3 a{
     color:rgb(51,51,51);
+}
 
+
+.slide-enter {
+	-webkit-transition: 3s linear all; /* Chrome */
+	transition: 3s linear all;
+	opacity: 0;
+}
+
+.slide-enter .slide-enter-active {
+	opacity: 1;
 }

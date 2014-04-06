@@ -2,16 +2,43 @@
 
 <h3 class="first"><a data-ng-click="changeView('getting-started','howitworks')">Getting Started</a></h3>
 		<ul class="nav nav-pills nav-stacked">
-			<li><a data-ng-click="changeView('getting-started','howitworks')">How it works</a></li>
-			<li><a data-ng-click="changeView('getting-started','qinstall')">Quick Install</a></li>
+			<li><a data-ng-click="changeView('getting-started','howitworks')" data-ng-animate=" 'slide' ">How it works</a></li>
+			<li><a data-ng-click="changeView('getting-started','qinstall')" data-ng-animate=" 'slide' ">Quick Install</a></li>
 			<li><a data-ng-click="changeView('getting-started','prereq')">Prerequisites</a></li>
 			<li><a data-ng-click="changeView('getting-started','technologies')">Technologies</a></li>
 		</ul>
-<h3>Directory structure</h3>
+<h3>Overview</h3>
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('server')">Server Side</a></li>
-		<li><a data-ng-click="changeView('client')">Client Side</a></li>
-		<li><a data-ng-click="changeView('config')">Configuration</a></li>
+		<li><a data-ng-click="changeView('overview','system')">System</a></li>
+		<li><a data-ng-click="changeView('overview','auth')">Auth</a></li>
+		<li><a data-ng-click="changeView('overview','articles')">Articles</a></li>
+	</ul>
+<h3>Server Side</h3>
+	<ul class="nav nav-pills nav-stacked">
+		<li><a data-ng-click="changeView('server','swig')">Swig/views</a></li>
+		<li><a data-ng-click="changeView('server','autoload')">Autoloaded files</a></li>
+		<li><a data-ng-click="changeView('server','routing')">Routing</a></li>
+		<li><a data-ng-click="changeView('server','static')">Static files</a></li>
+		<li><a data-ng-click="changeView('server','datamodels')">Data models</a></li>
+		<li><a data-ng-click="changeView('server','mocha')">Testing (Mocha)</a></li>
+	</ul>
+<h3>Client Side</h3>
+	<ul class="nav nav-pills nav-stacked">
+		<li><a data-ng-click="changeView('client','controllers')">Controllers</a></li>
+		<li><a data-ng-click="changeView('client','views')">Views</a></li>
+		<li><a data-ng-click="changeView('client','directives')">Directives</a></li>
+		<li><a data-ng-click="changeView('client','services')">Services</a></li>
+		<li><a data-ng-click="changeView('client','filters')">Filters</a></li>
+		<li><a data-ng-click="changeView('client','karma')">Testing (Karma)</a></li>
+	</ul>
+<h3>CLI Reference</h3>
+	<ul class="nav nav-pills nav-stacked">
+		<li><a data-ng-click="changeView('cli','scaffolding')">Scaffolding</a></li>
+		<li><a data-ng-click="changeView('cli','modules')">Modules</a></li>
+		<li><a data-ng-click="changeView('cli','docs')">Docs</a></li>
+		<li><a data-ng-click="changeView('cli','packages')">Packages</a></li>
+		<li><a data-ng-click="changeView('cli','status')">Status</a></li>
+		<li><a data-ng-click="changeView('cli','users')">Users</a></li>
 	</ul>
 <h3>Tools</h3>
 	<ul class="nav nav-pills nav-stacked">
@@ -27,34 +54,9 @@
 		<li><a href="http://javascriptjabber.com/092-jsj-the-mean-stack-with-ward-bell-and-valeri-karpov/">JS Jabber (audio)</li>
 	</ul>
 
-Technologies
-Annotated first experienced
-Overview
-	Directory Structure
-		system
-		auth
-		articles
-Server Side
-	swig/views
-	autoloaded files
-	routing
-	static files
-	data models
-	tests (mocha)
-Client Side
-	Controllers
-	Views
-	Directives
-	Services
-	Filters
-	tests (karma)
-CLI Reference
-	scaffolding
-	modules
-	docs
-	packages
-	status
-	users
+
+
+
 Modules
 	Overview
 	your first module
@@ -71,7 +73,7 @@ Assests
 Permission
 Best Practicies / Design principles
 	API module
-	Client + Server Module
+	cli + Server Module
 	Server only Module
 Getting Ready for production
 Dependencies
