@@ -1,10 +1,10 @@
-<section id="docs" class="content" data-ng-controller="DocsController">
+<section id="docs" class="content" data-ng-controller="DocsController" data-spy="scroll">
 	<section class="container">
 		<div class="col-md-2">
 			<div data-ng-include="'views/docs/docbar.html'"></div>
 		</div>
-		<section class="col-md-10 col-md-offset-2" ng-style="{'min-height': {{height}} +'px' }" >
-			<div data-ng-include="'views/docs/' + view +'.html'"></div>
+		<section class="col-md-10 col-md-offset-2">
+			<div data-ng-init="view='getting-started'" data-ng-include="'views/docs/' + view +'.html'"></div>
 		</section><!-- end of cold-md-10 -->
 	</section> <!-- end of container -->
 </section> <!-- end of content -->

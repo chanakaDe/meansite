@@ -111,7 +111,8 @@ padding: 0px 15px
 }
 #docs ul li a:hover{
   text-decoration: underline;
-  color:blue;
+  color:#ee0d0d;
+
 }
 #docs ul li a span{
   text-decoration: none;

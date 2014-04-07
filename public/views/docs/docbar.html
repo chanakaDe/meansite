@@ -1,62 +1,59 @@
-<nav class="nav-docs" role="complementary">
-<accordion close-others="true">
- <accordion-group data-ng-click="changeView('getting-started','howitworks')" heading="Getting Started" is-open="true">
+<nav class="nav-docs" role="complementary" >
+	<h3>Getting Started</h3>
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('getting-started','howitworks')" data-ng-animate=" 'slide' ">How it works</a></li>
-		<li><a data-ng-click="changeView('getting-started','qinstall')" data-ng-animate=" 'slide' ">Quick Install</a></li>
-		<li><a data-ng-click="changeView('getting-started','prereq')">Prerequisites</a></li>
-		<li><a data-ng-click="changeView('getting-started','technologies')">Technologies</a></li>
+		<li>How it works</li>
+		<li data-ng-click="changeView('getting-started','installation')">Quick Install</li>
+		<li data-ng-click="changeView('getting-started','prereq')">Prerequisites</li>
+		<li data-ng-click="changeView('getting-started','technologies')">Technologies</li>
 	</ul>
-</accordion-group>
-<accordion-group data-ng-click="changeView('overview','system')" heading="Overview" is-open="false">
+	<h3>Overview</h3>
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('overview','system')">System</a></li>
-		<li><a data-ng-click="changeView('overview','auth')">Auth</a></li>
-		<li><a data-ng-click="changeView('overview','articles')">Articles</a></li>
+		<li data-ng-click="changeView('overview','system')">System</li>
+		<li data-ng-click="changeView('overview','auth')">Auth</li>
+		<li data-ng-click="changeView('overview','articles')">Articles</li>
 	</ul>
-</accordion-group>
-<accordion-group data-ng-click="changeView('overview','system')" heading="Server Side" is-open="false">
+	<h3>Server Side</h3>
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('server','swig')">Swig/views</a></li>
-		<li><a data-ng-click="changeView('server','autoload')">Autoloaded files</a></li>
-		<li><a data-ng-click="changeView('server','routing')">Routing</a></li>
-		<li><a data-ng-click="changeView('server','static')">Static files</a></li>
-		<li><a data-ng-click="changeView('server','datamodels')">Data models</a></li>
-		<li><a data-ng-click="changeView('server','mocha')">Testing (Mocha)</a></li>
+		<li data-ng-click="changeView('server','swig')">Swig/views</li>
+		<li data-ng-click="changeView('server','autoload')">Autoloaded files</li>
+		<li data-ng-click="changeView('server','routing')">Routing</li>
+		<li data-ng-click="changeView('server','static')">Static files</li>
+		<li data-ng-click="changeView('server','datamodels')">Data models</li>
+		<li data-ng-click="changeView('server','mocha')">Testing (Mocha)</li>
 	</ul>
-</accordion-group>
-<accordion-group data-ng-click="changeView('client','controllers')" heading="Client Side" is-open="false">
+
+<h3>Client Side</h3>
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('client','controllers')">Controllers</a></li>
-		<li><a data-ng-click="changeView('client','views')">Views</a></li>
-		<li><a data-ng-click="changeView('client','directives')">Directives</a></li>
-		<li><a data-ng-click="changeView('client','services')">Services</a></li>
-		<li><a data-ng-click="changeView('client','filters')">Filters</a></li>
-		<li><a data-ng-click="changeView('client','karma')">Testing (Karma)</a></li>
+		<li><a data-ng-click="changeView('client','controllers')">Controllers</li>
+		<li><a data-ng-click="changeView('client','views')">Views</li>
+		<li><a data-ng-click="changeView('client','directives')">Directives</li>
+		<li><a data-ng-click="changeView('client','services')">Services</li>
+		<li><a data-ng-click="changeView('client','filters')">Filters</li>
+		<li><a data-ng-click="changeView('client','karma')">Testing (Karma)</li>
 	</ul>
-</accordion-group>
-<accordion-group data-ng-click="changeView('cli','scaffolding')" heading="CLI Reference" is-open="false">
+	<h3>CLI</h3>
+
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('cli','scaffolding')">Scaffolding</a></li>
-		<li><a data-ng-click="changeView('cli','modules')">Modules</a></li>
-		<li><a data-ng-click="changeView('cli','docs')">Docs</a></li>
-		<li><a data-ng-click="changeView('cli','packages')">Packages</a></li>
-		<li><a data-ng-click="changeView('cli','status')">Status</a></li>
-		<li><a data-ng-click="changeView('cli','users')">Users</a></li>
+		<li><a data-ng-click="changeView('cli','scaffolding')">Scaffolding</li>
+		<li><a data-ng-click="changeView('cli','modules')">Modules</li>
+		<li><a data-ng-click="changeView('cli','docs')">Docs</li>
+		<li><a data-ng-click="changeView('cli','packages')">Packages</li>
+		<li><a data-ng-click="changeView('cli','status')">Status</li>
+		<li><a data-ng-click="changeView('cli','users')">Users</li>
 	</ul>
-</accordion-group>
 
 <h3>Tools</h3>
 	<ul class="nav nav-pills nav-stacked">
-		<li><a href="" data-ng-click="changeView('npm')">NPM</a></li>
-		<li><a href="" data-ng-click="changeView('bower')">Bower</a></li>
-		<li><a href="" data-ng-click="changeView('grunt')">Grunt</a></li>
+		<li><a href="" data-ng-click="changeView('npm')">NPM</li>
+		<li><a href="" data-ng-click="changeView('bower')">Bower</li>
+		<li><a href="" data-ng-click="changeView('grunt')">Grunt</li>
 	</ul>
+
 <h3>Resources</h3>
 	<ul class="nav nav-pills nav-stacked">
-		<li><a href="http://scotch.io/bar-talk/setting-up-a-mean-stack-single-page-application">scotch.io</a></li>
-		<li><a href="http://code.tutsplus.com/tutorials/introduction-to-the-mean-stack--cms-19918">TutsPlus</a></li>
-		<li><a href="http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman">AddyOsmani</a></li>
+		<li><a href="http://scotch.io/bar-talk/setting-up-a-mean-stack-single-page-application">scotch.io</li>
+		<li><a href="http://code.tutsplus.com/tutorials/introduction-to-the-mean-stack--cms-19918">TutsPlus</li>
+		<li><a href="http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman">AddyOsmani</li>
 		<li><a href="http://javascriptjabber.com/092-jsj-the-mean-stack-with-ward-bell-and-valeri-karpov/">JS Jabber (audio)</li>
 	</ul>
 
@@ -91,34 +88,34 @@ Common problems/ Troubleshooting
 <h3>Best Practices</h3>
 <ul>
 			<li>
-				<a href="#!/docs/#configuration">Configuration</a>
+				<a href="#!/docs/#configuration">Configuration
 			</li>
 			<li>
-				<a href="#!/docs/#troubleshooting">Troubleshooting</a>
+				<a href="#!/docs/#troubleshooting">Troubleshooting
 			</li>
 			<li>
-				<a href="#!/docs/#folder-structure">Folder Structure</a>
+				<a href="#!/docs/#folder-structure">Folder Structure
 			</li>
 			<li>
-				<a href="#!/docs/#autoload">Autoloaded Files</a>
+				<a href="#!/docs/#autoload">Autoloaded Files
 			</li>
 			<li>
-				<a href="#!/docs/#express">Express &amp; Routing</a>
+				<a href="#!/docs/#express">Express &amp; Routing
 			</li>
 			<li>
-				<a href="#!/docs/#backend-views">Backend Views</a>
+				<a href="#!/docs/#backend-views">Backend Views
 			</li>
 			<li>
-				<a href="#!/docs/#server-tests">Server Tests</a>
+				<a href="#!/docs/#server-tests">Server Tests
 			</li>
 			<li>
-				<a href="#!/docs/#angularjs-tests">AngularJS Tests</a>
+				<a href="#!/docs/#angularjs-tests">AngularJS Tests
 			</li>
 			<li>
-				<a href="#!/docs/#angularjs-modules">AngularJS Modules</a>
+				<a href="#!/docs/#angularjs-modules">AngularJS Modules
 			</li>
 			<li>
-				<a href="#!/docs/#article-example">The Article Example</a>
+				<a href="#!/docs/#article-example">The Article Example
 			</li>
 -->
 		</ul>

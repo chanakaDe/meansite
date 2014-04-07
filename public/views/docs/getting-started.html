@@ -1,43 +1,31 @@
-<div class="infograph">
-    <img src="/img/infographics/howitworks.png"></img>
-</div>
+<div ng-class="{'wrapper':slide === true , 'no-wrapper': slide === false }">
+
 <h2>Getting Started</h2>
-<h3 id="howitworks">How It works</h3>
-<ol>
-    <li>The Browser connects to the desired url which is in the form of http://localhost:3000 (if you're in a development environment) or the site name.
-        <br/>The Connection is handled by Express which uses the <a href="https://github.com/visionmedia/consolidate.js/">consolidate.js library</a> to render the server side application markup (the default templating engine is <a href="http://paularmstrong.github.io/swig/">swig</a>).
-    </li>
-    <li>Page is returned to browser - The page rendered contains the inclusion of the angular.js library(among others). The markup contains an "ng-view" tag which is where the angular app initializes.
-    </li>
-</ol>
-<hr/>
-<h3 id="qinstall">Installation</h3>
-<div class="inner-link-anchor" id="installation"></div>
-<p class="alert alert-danger">Make sure mongodb is installed and running on port 27017 before you start</p>
-<p>To startup with MEAN follow the next step:</p>
-<ol>
-    <li>Get the mean cmdline</li>
-    <pre>
-        <code>sudo npm install -g meanio</code>
-    </pre>
-    <li>Create you first app
-        <pre>
-            <code>mean init myApp</code>
-        </pre>
-    </li>
-    <li>Install MEAN.IO's dependencies by running...
-        <pre>
-            <code>cd myApp && npm install</code>
-        </pre>
-    </li>
-    <li>Scaffold your first module
-        <pre>
-            <code>mean package myModule</pre>
-        </code>
-    </li>
-    <li>To launch mean run:
-        <pre>
-            <code id="technologies">grunt</code>
-        </pre>
-    </li>
-</ol>
+<section id="installation">
+  <h3>Installation</h3>
+  <div class="inner-link-anchor" id="installation"></div>
+  <p>2 minutes install</p>
+  <pre>
+ > sudo npm install -g meanio   // Get the mean cmdline
+ > mean init myApp             // create your first app
+ > cd myApp && npm install     // Install dependencies
+ > grunt                       // Launch mean
+  </pre>
+</section>
+
+
+  <section id="prereq">
+    <p class="alert alert-danger">Make sure mongodb is installed and running on port 27017 before you start</p>
+
+  <h3>PreRequisites</h3>
+<strong>Node.js</strong>
+<p>Download and Install Node.js. You can also follow this gist for a quick and easy way to install Node.js and npm</p>
+<strong>MongoDB</strong>
+<p>Download and Install MongoDB - Make sure it's running on the default port (27017).</p>
+<strong>NPM</strong><p>Node.js package manager, should be installed when you install node.js.</p>
+<stong>Bower</strong><p>Web package manager, installing Bower is simple when you have npm:</p>
+  </section>
+  <section id="technologies">
+
+  </sectoion>
+</div>

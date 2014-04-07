@@ -6,26 +6,26 @@ header {
     font-weight: bold;
 }
 .navbar .brand {
-font-family: 'Quantico', sans-serif;
-padding-left:34px;
-font-size:2em;
-margin-top:5px;
-width:116px;
-height:39px;
-float:left;
-color:#fff;
-position: absolute;
-top:10;
-background:url('/img/logos/meanlogo.png') bottom left no-repeat;
-background-size:30%;
-z-index:10;
+	font-family: 'Quantico', sans-serif;
+	padding-left:34px;
+	font-size:2em;
+	margin-top:5px;
+	width:116px;
+	height:39px;
+	float:left;
+	color:#fff;
+	position: absolute;
+	top:10;
+	background:url('/img/logos/meanlogo.png') bottom left no-repeat;
+	background-size:30%;
+	z-index:10;
 }
 
 .navbar-inner {
-background-color:#1b1b1b;
-background-image: linear-gradient(to bottom, #222222, #111111);
-background-repeat: repeat-x;
-border-color: #252525;
+	background-color:#1b1b1b;
+	background-image: linear-gradient(to bottom, #222222, #111111);
+	background-repeat: repeat-x;
+	border-color: #252525;
 }
 
 .navbar-inner .btn {
@@ -38,8 +38,8 @@ float:right;
 color:#fff;
 }
 .navbar-nav li a:hover, .navbar-nav li a:active{
-text-decoration:underline;
-background-color:#007c95;
+	text-decoration:underline;
+	background-color:#97003a;
 }
 .content {
   /*  margin-top:40px; */
@@ -191,16 +191,38 @@ margin-bottom:100px;
 }
 
 
-.slide-enter {
-	-webkit-transition: 3s linear all; /* Chrome */
-	transition: 3s linear all;
-	opacity: 0;
-}
-
-.slide-enter .slide-enter-active {
-	opacity: 1;
-}
-
 #docs .panel-group {
-	width: 175px;
+	width:175px;
 }
+
+/* Docs Animation */
+
+.wrapper {
+	-webkit-transition: 0.5s linear all;
+	-moz-transition: 0.5s linear all;
+	-o-transition: 0.5s linear all;
+	transition: 0.5s linear all;
+	opacity:1;
+}
+
+.no-wrapper {
+	-webkit-transition: 0.5s linear all;
+	-moz-transition: 0.5s linear all;
+	-o-transition: 0.5s linear all;
+	transition: 0.5s linear all;
+	opacity:0;
+}
+/*
+.docsitem {
+	opacity:0;
+}
+
+
+.docsitem:target {
+	-webkit-transition: 0.5s linear all;
+	-moz-transition: 0.5s linear all;
+	-o-transition: 0.5s linear all;
+	transition: 0.5s linear all;
+	opacity:1;
+}
+*/
