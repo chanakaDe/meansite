@@ -17,7 +17,7 @@ angular.module('mean.system').controller('DocsController',
         console.log('here');
         $location.hash(anchor);
         $anchorScroll();
-      },600);
+      },300);
     };
   }
 ]);

@@ -32,10 +32,10 @@ header {
 padding:0;
 }
 .navbar-nav{
-float:right;
+	float:right;
 }
 .navbar-nav a{
-color:#fff;
+	color:#fff;
 }
 .navbar-nav li a:hover, .navbar-nav li a:active{
 	text-decoration:underline;
@@ -198,18 +198,18 @@ margin-bottom:100px;
 /* Docs Animation */
 
 .wrapper {
-	-webkit-transition: 0.5s linear all;
-	-moz-transition: 0.5s linear all;
-	-o-transition: 0.5s linear all;
-	transition: 0.5s linear all;
+	-webkit-transition: 0.3s linear all;
+	-moz-transition: 0.3s linear all;
+	-o-transition: 0.3s linear all;
+	transition: 0.3s linear all;
 	opacity:1;
 }
 
 .no-wrapper {
-	-webkit-transition: 0.5s linear all;
-	-moz-transition: 0.5s linear all;
-	-o-transition: 0.5s linear all;
-	transition: 0.5s linear all;
+	-webkit-transition: 0.3s linear all;
+	-moz-transition: 0.3s linear all;
+	-o-transition: 0.3s linear all;
+	transition: 0.3s linear all;
 	opacity:0;
 }
 /*
