@@ -234,7 +234,7 @@
 	approach. The package system has a route function that passes along the package object to the main routing file typically <i>server/routes/index.js</i></p> 
 
 	<p>Example from the <b>app.js</b></p>
-	<style>#express1-example { height: 130;font-size:16px;}</style>
+	<style>#express1-example { height: 90px;font-size:16px;}</style>
 	<div id="express1-example"ui-ace="{ mode:'javascript', theme:'monokai'}" readonly="true">
 	//By default the Package Object is passed to the routes along withe the other arguments
 	MyPackage.routes(app, auth, database);		
@@ -255,31 +255,65 @@
 	</div>	
 </section>
 
+<section id="angular-routes">
+	<h2>Angular Routes</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Client</span>
+	<p> </p>
+	<p>The angular routes are defined in <i>public/config/routes</i>. Just like the latest version of mean, the packages
+	use the <i>$stateProvider</i></p> 
 
-	<h3>Adding a menu item</h3>
+	<style>#angular-example { height: 130px;font-size:16px;}</style>
+	<div id="angular-example"ui-ace="{ mode:'javascript', theme:'monokai'}" readonly="true">
+	$stateProvider
+		.state('myPackage example page', {
+			url: '/myPackage/example',
+			templateUrl: 'myPackage/views/index.html'
+		});
+	</div>	
 
-
-	<h3>View Rendering</h3>
-
-
-
-<h3>Angular routes</h3>	
-
-
-
-
-<section id="routes">
-  <h2>Using Express Routes</h2>
-</section>
-
-<section id="angular">
-  <h2>Angular Modules and Dependencies/h2>
+	<p class="alert alert-info">The angular views are publically accessible via templateUrl when prefixed with the package name</p>
 </section>
 
 <section id="menus">
-  <h2>Menu System</h2>
+	<h2>Menu System</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
+	<p> </p>
+	<p>Packages are able to hook into an existing menu system and add links to various menus integrated within mean.</p>
+
+	<p>Each link specifies its <i>title, template, menu and role</i> that is allowed to see the link. If the menu specified does not exist a new menu will be created. The menu object is made accessible within the client by means of a <i>menu angular service</i> that queries teh menu controller for information about links.</p> 	
+
+	<p>Below is an example how to add a link to the main menu from <i>app.js</i></p>
+
+	<style>#menu1-example { height: 180px;font-size:16px;}</style>
+	<div id="menu1-example"ui-ace="{ mode:'javascript', theme:'monokai'}" readonly="true">
+	//We are adding a link to the main menu for all authenticated users
+	MyPackage.menus.add({
+		title: "myPackage example page",
+		link: "myPackage example page",
+		roles: ["authenticated"],
+		menu: "main"
+	});
+	</div>
+
+	<p class="alert alert-info">You can look at the angular header controller in the mean project for more info. You can find it <i>public/system/controllers/header.js</i> and see how the menu service is implemented</p>
 </section>
 
+<section id="rendering">
+	<h2>Html View Rendering</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
+	<p> </p>
+	
+	<p>The packages come built in with a rendering function allowing packages to render static html. The default templating engine is <i>swig</i>. The views are found in <i>server/views</i> of the package and should end with the .html suffix</p> 	
+
+	<p>Below is an example rendering some simple html></p>
+
+	<style>#render1-example { height: 160px;font-size:16px;}</style>
+	<div id="render1-example"ui-ace="{ mode:'javascript', theme:'monokai'}" readonly="true">
+	app.get('/myPackage/example/render', function (req,res,next) {
+		MyPackage.render('index', {packageName:'myPackage'}, function (err, html) {
+			//Rendering a view from the Package server/views
+			res.send(html);
+		});
+	});
+	</div>
+</section>
 
 
 <section id="publishing">
