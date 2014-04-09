@@ -212,6 +212,8 @@ margin-bottom:100px;
 	transition: 0.3s linear all;
 	opacity:0;
 }
+
+.ace_editor {margin-top: 20px; margin-bottom: 20px; overflow:hidden;}
 /*
 .docsitem {
 	opacity:0;
