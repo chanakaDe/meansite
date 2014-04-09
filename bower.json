@@ -5,6 +5,7 @@
         "angular": "latest",
         "angular-resource": "latest",
         "angular-cookies": "latest",
+        "angular-ui-ace": "latest",
         "angular-mocks": "latest",
         "angular-route": "latest",
         "bootstrap": "3.0.3",
