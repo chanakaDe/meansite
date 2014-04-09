@@ -1,11 +1,15 @@
 <section id="overview">
   <h2>Packages Overview</h2>
 
-  <p>The mean.io package system is a system allowing developers to create modular code that provides useful tools that other mean projects could use. The packages are plug and play and are used in a very similar way to traditional npm packages.</p>
+  <p>The mean.io package system is a system allowing developers to create modular code that provides useful tools that other mean developers can use. The packages are plug and play and are used in a very similar way to traditional npm packages.</p>
 
 	<p>The meanio npm package integrates all the packages into the mean project as if the code was part of mean itself and provides the developers with all the necceesary tools required to integrate their package into the host project.</p>
 
 	<p>Packages are mini mean projects and follow similar desgign principles of a traditional mean app, without the overhead.</p>
+
+	<p class="alert alert-info">The label <span class="label label-info">Abstraction</span> indicates functionality managed by the package system</p>	
+	<p class="alert alert-info">The label <span class="label label-info">Server</span> indicates server side code</p>
+	<p class="alert alert-info">The label <span class="label label-info">Client</span> indicates client side code</p>	
 
 </section>
 
@@ -29,6 +33,93 @@
 
 <section id="using">
   <h2>Using Packages</h2>
+
+	<p>Mean packages can be used in two ways </p>
+
+	<ol>
+		<li>To provide some service such as token generation, inline editing, theme changing</li>
+		<li>As a tool/library for other packages or your general code base</li>
+	</ol>
+
+	<h3>Installing a package</h3>
+
+	<p>We will use "mean-tokens" as an example.<p>
+
+	<p>From the root of your mean project issue the following command.</p>
+
+	<style>.ace_editor { height: 55px;font-size:16px;}</style>
+	<div ui-ace="{ mode:'BatchFile', theme:'monokai', FontSize:'18px'}" readonly="true">
+		mean install mean-tokens;
+	</div>
+		
+	<p>Restart your app and login. You will notice a link in the main menu to an example page</p>
+
+	<p class="alert alert-success">Congratulations you successfully installed your first package</p>
+
+	<p class="alert alert-warning">Admin role is required to edit tokens. See the CLI section for how to assign roles to users or do <i>mean -h</i> from the command line</p>
+
+</section>
+
+<section id="fs">
+	<h2>File Structure</h2>
+
+	<p>The file structure is similar to that of the mean project itself</p>
+
+	<p>All of the Server side code resides in the <strong>/server</strong> directory.</p>
+
+	<span class="label label-info">server</span>
+	<pre>  
+	Server 								
+	--- config        # Configuration files
+	--- controllers   # Server side logic goes here
+	--- models        # Database Schema Models
+	--- routes        # Rest api endpoints for routing
+	--- views         # Swig based html rendering
+	</pre>
+
+	<p>All of the Client side code resides in the <strong>/public</strong> directory.</p>
+
+	<span class="label label-info">client</span>
+	<pre>
+	public            # Anything in public is public assessible
+	--- assets        # Javascript/Css/Images (not aggregated)
+	--- controllers   # Angular Controllers
+	--- config        # Contains routing files  						
+	--- services      # Angular Services (there are also directive and filter folders)
+	--- views         # Angular views
+	</pre>
+	
+	<p class="alert alert-warning">All javascript within public is automatically aggregated with the exception of files in assets which can be manually added using the <i>aggregateAsset() </i> <span class="label label-info">abstraction</span> function</p>	
+
+
+</section>	
+
+
+	<h3>Registering a Package</h3><span class="label label-info">Abstraction</span>
+
+	<h3>Angular Dependencies</h3>
+
+	<h3>Declaring dependencies</h3>
+
+	<h3>Overwriting Dependency</h3>
+
+	<h3>Adding a menu item</h3>
+
+	<h3>Using settings</h3>
+
+	<h3>View Rendering</h3>
+	*Adding aggregated css and js
+
+	In order to make a package you first need to instantiate it and then register it and declare your dependancies.
+
+	Dependencies? Yes all meanio packages are dependable and dependencies are provided by the use of dependency injection.
+
+	//Code samples
+	`var Pizza = new require('meaniio').Module`
+	`Pizza.register(function(app, database) {
+		
+	});
+
 </section>
 
 <section id="create">
