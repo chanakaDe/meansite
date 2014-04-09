@@ -1,34 +1,38 @@
 <nav class="nav-docs" role="complementary" >
-	<h3>Getting Started</h3>
-	<ul class="nav nav-pills nav-stacked">
-		<li>How it works</li>
-		<li data-ng-click="changeView('getting-started','installation')">Quick Install</li>
-		<li data-ng-click="changeView('getting-started','prereq')">Prerequisites</li>
-		<li data-ng-click="changeView('getting-started','technologies')">Technologies</li>
-	</ul>
-	<h3>Overview</h3>
-	<ul class="nav nav-pills nav-stacked">
-		<li data-ng-click="changeView('overview','system')">System</li>
-		<li data-ng-click="changeView('overview','auth')">Auth</li>
-		<li data-ng-click="changeView('overview','articles')">Articles</li>
-	</ul>
+<accordion close-others="oneAtATime">
+	<accordion-group heading="Getting Started" is-open="true">
+			<ul class="nav nav-pills nav-stacked">
+				<li data-ng-click="changeView('getting-started','installation')">Quick Install</li>
+				<li data-ng-click="changeView('getting-started','prereq')">Prerequisites</li>
+				<li data-ng-click="changeView('getting-started','technologies')">Technologies</li>
+			</ul>
+</accordion-group>
 
-	<h3>Modules</h3>
-	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('modules','overview')">Overview</li>
-		<li><a data-ng-click="changeView('modules','first')">Your first module</li>
-		<li><a data-ng-click="changeView('modules','using')">Using Modules</li>
-		<li><a data-ng-click="changeView('modules','create')">Create Modules</li>
-		<li><a data-ng-click="changeView('modules','fs')">File Structure</li>
-		<li><a data-ng-click="changeView('modules','menus')">Adding Menus</li>
-		<li><a data-ng-click="changeView('modules','routes')">Adding Routes</li>
-		<li><a data-ng-click="changeView('modules','cssjs')">CSS/JS</li>
-		<li><a data-ng-click="changeView('modules','settings')">Settings</li>
-		<li><a data-ng-click="changeView('modules','dependencies')">Dependencies</li>
-		<li><a data-ng-click="changeView('modules','publishing')">Publishing</li>
-	</ul>
+<accordion-group heading="Overview">
+			<ul class="nav nav-pills nav-stacked">
+				<li data-ng-click="changeView('overview','system')">System</li>
+				<li data-ng-click="changeView('overview','auth')">Auth</li>
+				<li data-ng-click="changeView('overview','articles')">Articles</li>
+			</ul>
+</accordion-group>
 
-	<h3>Server Side</h3>
+<accordion-group heading="Modules">
+	<ul class="nav nav-pills nav-stacked">
+		<li data-ng-click="changeView('modules','overview')">Overview</li>
+		<li data-ng-click="changeView('modules','first')">Your first module</li>
+		<li data-ng-click="changeView('modules','using')">Using Modules</li>
+		<li data-ng-click="changeView('modules','create')">Create Modules</li>
+		<li data-ng-click="changeView('modules','fs')">File Structure</li>
+		<li data-ng-click="changeView('modules','menus')">Adding Menus</li>
+		<li data-ng-click="changeView('modules','routes')">Adding Routes</li>
+		<li data-ng-click="changeView('modules','cssjs')">CSS/JS</li>
+		<li data-ng-click="changeView('modules','settings')">Settings</li>
+		<li data-ng-click="changeView('modules','dependencies')">Dependencies</li>
+		<li data-ng-click="changeView('modules','publishing')">Publishing</li>
+	</ul>
+</accordion-group>
+
+<accordion-group heading="Server Side">
 	<ul class="nav nav-pills nav-stacked">
 		<li data-ng-click="changeView('server','swig')">Swig/views</li>
 		<li data-ng-click="changeView('server','autoload')">Autoloaded files</li>
@@ -37,27 +41,34 @@
 		<li data-ng-click="changeView('server','datamodels')">Data models</li>
 		<li data-ng-click="changeView('server','mocha')">Testing (Mocha)</li>
 	</ul>
+</accordion-group>
 
-<h3>Client Side</h3>
+<accordion-group heading="Client Side">
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('client','controllers')">Controllers</li>
-		<li><a data-ng-click="changeView('client','views')">Views</li>
-		<li><a data-ng-click="changeView('client','directives')">Directives</li>
-		<li><a data-ng-click="changeView('client','services')">Services</li>
-		<li><a data-ng-click="changeView('client','filters')">Filters</li>
-		<li><a data-ng-click="changeView('client','karma')">Testing (Karma)</li>
+		<li data-ng-click="changeView('client','controllers')">Controllers</li>
+		<li data-ng-click="changeView('client','views')">Views</li>
+		<li data-ng-click="changeView('client','directives')">Directives</li>
+		<li data-ng-click="changeView('client','services')">Services</li>
+		<li data-ng-click="changeView('client','filters')">Filters</li>
+		<li data-ng-click="changeView('client','karma')">Testing (Karma)</li>
 	</ul>
-	<h3>CLI</h3>
+</accordion-group>
 
+
+<accordion-group heading="CLI">
 	<ul class="nav nav-pills nav-stacked">
-		<li><a data-ng-click="changeView('cli','scaffolding')">Scaffolding</li>
-		<li><a data-ng-click="changeView('cli','modules')">Modules</li>
-		<li><a data-ng-click="changeView('cli','docs')">Docs</li>
-		<li><a data-ng-click="changeView('cli','packages')">Packages</li>
-		<li><a data-ng-click="changeView('cli','status')">Status</li>
-		<li><a data-ng-click="changeView('cli','users')">Users</li>
+		<li data-ng-click="changeView('cli','scaffolding')">Scaffolding</li>
+		<li data-ng-click="changeView('cli','modules')">Modules</li>
+		<li data-ng-click="changeView('cli','docs')">Docs</li>
+		<li data-ng-click="changeView('cli','packages')">Packages</li>
+		<li data-ng-click="changeView('cli','status')">Status</li>
+		<li data-ng-click="changeView('cli','users')">Users</li>
 	</ul>
+</accordion-group>
 
+</nav>
+</accordion>
+<!--
 <h3>Tools</h3>
 	<ul class="nav nav-pills nav-stacked">
 		<li><a href="" data-ng-click="changeView('npm')">NPM</li>
@@ -74,7 +85,8 @@
 		<li><a href="http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman">AddyOsmani</li>
 		<li><a href="http://javascriptjabber.com/092-jsj-the-mean-stack-with-ward-bell-and-valeri-karpov/">JS Jabber (audio)</li>
 	</ul>
-
+</nav>
+-->
 
 <!--
 Assests
@@ -123,7 +135,3 @@ Common problems/ Troubleshooting
 				<a href="#!/docs/#article-example">The Article Example
 			</li>
 -->
-		</ul>
-</accordion>
-
-	</nav>
