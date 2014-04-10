@@ -56,9 +56,11 @@
 
 <accordion-group heading="CLI">
 	<ul class="nav nav-pills nav-stacked">
+		<li data-ng-click="changeView('cli','installation')">Installation</li>
+		<li data-ng-click="changeView('cli','help')">Help</li>
 		<li data-ng-click="changeView('cli','scaffolding')">Scaffolding</li>
-		<li data-ng-click="changeView('cli','modules')">Modules</li>
 		<li data-ng-click="changeView('cli','docs')">Docs</li>
+		<li data-ng-click="changeView('cli','modules')">Modules</li>
 		<li data-ng-click="changeView('cli','packages')">Packages</li>
 		<li data-ng-click="changeView('cli','status')">Status</li>
 		<li data-ng-click="changeView('cli','users')">Users</li>
