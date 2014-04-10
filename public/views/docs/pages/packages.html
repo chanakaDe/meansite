@@ -40,7 +40,7 @@
 
 </div>
 
-<section id="using">
+<section id="packages-using">
   <h2>Using Packages</h2>
 
 	<p>Mean packages can be used in two ways </p>
@@ -69,7 +69,7 @@
 
 </section>
 
-<section id="fs">
+<section id="packages-fs">
 	<h2>File Structure</h2>
 
 	<p>The file structure is similar to that of the mean project itself</p>
@@ -113,7 +113,7 @@
 </section>	
 
 
-<section id="register">
+<section id="packages-register">
 	<h2>Registering a Package</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 
 	<p> </p>
@@ -137,7 +137,7 @@
 	
 </section>
 
-<section id="dependencies">
+<section id="packages-dependencies">
 	<h2>Dependency Injection</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 
 	<p><blockquote><i>An injection is the passing of a dependency (a service) to a dependent object (a client). The service is made part of the client's state. Passing the service to the client, rather than allowing a client to build or find the service, is the fundamental requirement of the pattern.<a href="http://en.wikipedia.org/wiki/Dependency_injection">wikipedia</a></i></blockquote></p>
@@ -165,7 +165,7 @@
 
 </section>
 
-<section id="angular-deps">
+<section id="packages-angular-deps">
 	<h2>Angular Modules and Dependencies</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 	<p> </p>
 	<p>Every package registration automatically creates a corresponding angular module of the form <i>mean.[package-name]</i></p> 
@@ -186,7 +186,7 @@
 
 </section>
 
-<section id="assets">
+<section id="packages-assets">
 	<h2>Assets and Aggregation</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 	<p> </p>
 	<p>All assets such as images, javascript libraries and css stylesheets should be within <i>public/assets</i> of the package file structure.</p> 
@@ -209,7 +209,7 @@
 	<p class="alert alert-warning">Javascript files outside of assets are automatically aggregated and injected into the mean project. As a result libraries that you do not want aggregated should be placed within public/assets/js</p>
 </section>
 
-<section id="settings">
+<section id="packages-settings">
 	<h2>Settings Object</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 	<p> </p>
 	<p>The settings object is a persistance object that is stored in the packages collection and allows for saving persistant information per package such as configuration options or admin settings for the package</p> 
@@ -236,7 +236,7 @@
 	<p class="alert alert-warning">Each time you save settings you overwrite your previous value. Settings are designed to be used to store basic configuration options and should not be used as a large data store</p>
 </section>
 
-<section id="express-routes">
+<section id="packages-express-routes">
 	<h2>Express Routes</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 	<p> </p>
 	<p>All routing to server side controllers is handled by express routes. The package system uses the typical express
@@ -264,7 +264,7 @@
 	</div>	
 </section>
 
-<section id="angular-routes">
+<section id="packages-angular-routes">
 	<h2>Angular Routes</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Client</span>
 	<p> </p>
 	<p>The angular routes are defined in <i>public/config/routes</i>. Just like the latest version of mean, the packages
@@ -282,7 +282,7 @@
 	<p class="alert alert-info">The angular views are publically accessible via templateUrl when prefixed with the package name</p>
 </section>
 
-<section id="menus">
+<section id="packages-menus">
 	<h2>Menu System</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 	<p> </p>
 	<p>Packages are able to hook into an existing menu system and add links to various menus integrated within mean.</p>
@@ -305,7 +305,7 @@
 	<p class="alert alert-info">You can look at the angular header controller in the mean project for more info. You can find it <i>public/system/controllers/header.js</i> and see how the menu service is implemented</p>
 </section>
 
-<section id="rendering">
+<section id="packages-rendering">
 	<h2>Html View Rendering</h2><span class="label label-info">Abstraction</span>|<span class="label label-info">Server</span>
 	<p> </p>
 	
@@ -325,7 +325,7 @@
 </section>
 
 
-<section id="publishing">
+<section id="packages-publishing">
   <h2>Publishing your packages</h2>
   <p> </p>
 

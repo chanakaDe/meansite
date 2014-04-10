@@ -35,6 +35,7 @@ angular.module('mean.system').directive("scrollTo", ["$window",
             compile: function() {
 
                 function scrollInto(elementId) {
+                    
                     if (!elementId) $window.scrollTo(0, 0);
                     //check if an element can be found with id attribute
                     var el = document.getElementById(elementId);
