@@ -5,11 +5,52 @@
 		</div>
 		<section  class="col-md-10 col-md-offset-2">	
 			<h1>Release Notes</h1>
+			<section id="v0.3.2">
+				<h2>V0.3.2</h2> 
+				<h3>Release data 10-April-2014</h3>
+
+				<p>0.3.2 is a small release but has a large impact in the way packages are used</p>
+
+				<ol>
+					<li>Documentation for v0.3.x</li>
+					<li>Support for custom packages within the mean app</li>
+					<li>Changing of default scaffold location to /packages</li>					
+
+				</ol>
+				<p class="alert alert-warning">Mean versions prior to 0.3.2 will still have the packages scaffolded into /node_modules</p>	
+			</section>			
 			<section id="v0.3.1">
 				<h2>V0.3.1</h2>
+
+				<ol>
+					<li>Changed aggegateJs/css function to aggregateAsset(type,path,options)</li>
+					<li>Added automatic angular module generation </li>
+					<li>Added dependency declaration for angular modules</li>
+					<li>Use a git style sub command structure for cli</li>					
+
+				</ol>
+				<p class="alert alert-warning">aggregateJs and aggregateCss is no longer supported</p>					
 			</section>
 			<section id="v0.3.0">
 				<h2>V0.3.0</h2>
+
+				<h3>Initial Packages Release</h3>
+
+				<p>This was a massive release which fixed a lit of issues and paved the way for many new features. Documentation and detailed
+				information is due in the 0.3.2 release</p>
+
+				<ol>
+					<li>Added Roles to user schema</li>
+					<li>Added auth function for checking admin status</li>
+					<li>Added menu system</li>	
+					<li>Added mean Package system</li>
+					<li>Added mean CLI with scaffolding</li>
+
+				</ol>
+
+					<p class="alert alert-warning">Roles are added to new users that are registered. In order to use the features of the new 
+						mean version your old users in the database would need to be updated to have the authenticated role. The cli provides option to add roles to users</p>					
+				
 			</section>			
 		</section>
 	</section>
