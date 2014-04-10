@@ -1,0 +1,45 @@
+
+<section id="docs" class="content" data-ng-controller="DocsController">
+    <section class="container">
+
+        <div id="wrapper" class="row-fluid" >
+            <div class="col-md-2">
+                <nav class="nav-docs" role="complementary" >
+                    <div class="span3 " style="width: auto;">
+                        <ul id="navPills" class="nav nav-pills nav-stacked">
+
+                            <accordion>
+                                <accordion-group heading="Getting Started" is-open="true">                                        
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li class="active"><a href="#installation" prevent-default="" scroll-to="installation">Installation</a></li>
+                                        <li class=""><a href="#prereq" prevent-default="" scroll-to="prereq">Prerequisites</a></li>
+                                        <li class=""><a href="#technologies" prevent-default="" scroll-to="technologies">Technologies</a></li>                                                                                                                                                
+
+                                    </ul>                                    
+                                </accordion-group>
+
+                                <accordion-group heading="Packages" is-open="true">                                        
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li class="active"><a href="#installation" prevent-default=""  scroll-to="installation">Section 1</a></li>
+                                        <li class=""><a href="#prereq" prevent-default="" scroll-to="prereq">Section 1</a></li>                                                                                                                                                
+                                    </ul>                                    
+                                </accordion-group>                                
+                            </accordion>
+                        </ul>
+                    </div>
+
+                </nav>                                       
+            </div>
+        </div>
+            
+            <section class="col-md-10 col-md-offset-2">
+
+                <div id="scroller" scroll-spy="" data-target="#navPills" data-scroll-offset="280">
+                  <div data-ng-include="'views/docs/pages/getting-started.html'"></div>                    
+                  <div data-ng-include="'views/docs/pages/packages.html'"></div>
+
+                </div>
+            </section>
+        </div>
+    </section> <!-- end of container -->
+</section> <!-- end of content -->        
