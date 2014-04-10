@@ -6,7 +6,6 @@ angular.module('mean.system').directive('scrollSpy', function($timeout) {
         link: function(scope, elem, attr) {
             var offset = parseInt(attr.scrollOffset, 10)
             if (!offset) offset = 10;
-            console.log("offset:  " + offset);
             elem.scrollspy({
                 "offset": offset
             });
@@ -39,11 +38,13 @@ angular.module('mean.system').directive("scrollTo", ["$window",
                     if (!elementId) $window.scrollTo(0, 0);
                     //check if an element can be found with id attribute
                     var el = document.getElementById(elementId);
+                    
                     if (el) el.scrollIntoView();
+                    //if (el) window.scrollBy(0,0);
                 }
 
                 return function(scope, element, attr) {
-                    element.bind("click", function(event) {
+                    element.bind("click", function(event) {                        
                         scrollInto(attr.scrollTo);
                     });
                 };
