@@ -38,7 +38,7 @@
 </section>
 
 <section id="scaffolding">
- <h2>Scaffolding</h2>
+ <h2>Scaffolding a MEAN Project</h2>
 
 	<p>To create a new MEAN app, run <code>mean init</code>. Name for the application is optional. If no name is provided, "mean" is used. The MEAN project will be cloned from GitHub into a directory of the application name.</p>
 	<pre>
@@ -61,25 +61,28 @@
 
 <section id="modules">
 	<p class="alert alert-warning">All of the remaining of the commands must be run from the root folder of your MEAN application.</p>
- <h2>Modules</h2>
+ <h2>Contrib Packages</h2>
 
-	<p>MEAN modules can be installed or uninstalled via the CLI. Also, currently installed modules can be viewed with the <code>list</code> command.</p>
+	<p>Contrib MEAN packages can be installed or uninstalled via the CLI. Also, currently installed modules can be viewed with the <code>list</code> command.</p>
 	<pre>
 	$ mean list
 	$ mean install &lt;module&gt;
 	$ mean uninstall &lt;module&gt;
 	</pre>
 
+	<p class="alert alert-info">Mean packages installed via the installer are found in <i>/node_modules</i></p>	
+	
 </section>
 
 <section id="packages">
- <h2>Packages</h2>
+ <h2>Scaffolding Custom Packages</h2>
 
-	<p>The CLI provides a scaffolding function to create your own MEAN Packages. For more information, see the modules page.</p>
+	<p>The CLI provides a scaffolding function to create your own MEAN Packages. For more information, see the packages page.</p>
 	<pre>
 	$ mean package &lt;name&gt;
 	</pre>
-
+	<p class="alert alert-info">Mean packages are created in <i>/modules</i></p>	
+	<p class="alert alert-warning">Mean versions prior to 0.3.2 store packages in /node_modules</p>	
 </section>
 
 <section id="status">
