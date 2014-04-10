@@ -22,6 +22,36 @@ angular.module('mean').config(['$routeProvider',
         when('/docs', {
             templateUrl: 'views/docs/docs.html'
         }).
+        when('/docs/bower', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/cli', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/client', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/config', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/getting-started', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/grunt', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/npm', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/overview', {
+            templateUrl: 'views/docs/docs.html'
+        }).
+        when('/docs/packages', {
+            templateUrl: 'views/docs/docs.html'
+        }).                                                        
+        when('/docs/server', {
+            templateUrl: 'views/docs/docs.html'
+        }).        
          when('/support', {
             templateUrl: 'views/support/support.html'
         }).

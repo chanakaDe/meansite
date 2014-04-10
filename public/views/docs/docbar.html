@@ -1,6 +1,7 @@
 <nav class="nav-docs" role="complementary" >
-<accordion close-others="oneAtATime">
-	<accordion-group heading="Getting Started" is-open="true">
+<accordion>
+
+<accordion-group heading="Getting Started" is-open="true">
 			<ul class="nav nav-pills nav-stacked">
 				<li data-ng-click="changeView('getting-started','installation')">Quick Install</li>
 				<li data-ng-click="changeView('getting-started','prereq')">Prerequisites</li>
@@ -8,27 +9,45 @@
 			</ul>
 </accordion-group>
 
+<accordion-group heading="Packages">
+	<ul class="nav nav-pills nav-stacked">
+		<li data-ng-click="changeView('packages','overview')">Overview</li>
+		<li data-ng-click="changeView('packages','first')">Your first package</li>
+		<li data-ng-click="changeView('packages','using')">Using Packages</li>
+		<li data-ng-click="changeView('packages','fs')">File Structure</li>
+		<li data-ng-click="changeView('packages','register')">Registering Packages</li>
+		<li data-ng-click="changeView('packages','dependencies')">Dependency Injection</li>
+		<li data-ng-click="changeView('packages','angular-deps')">Angular Dependencies</li>
+		<li data-ng-click="changeView('packages','assets')">Assets and Aggregation</li>
+		<li data-ng-click="changeView('packages','settings')">Settings Object</li>
+		<li data-ng-click="changeView('packages','express-routes')">Express Routes</li>
+		<li data-ng-click="changeView('packages','angular-routes')">Angular Routes</li>
+		<li data-ng-click="changeView('packages','menus')">Menu System</li>
+		<li data-ng-click="changeView('packages','rendering')">Html Rendering</li>
+		<li data-ng-click="changeView('packages','publishing')">Publishing</li>		
+	</ul>
+</accordion-group>
+
+<accordion-group heading="CLI">
+	<ul class="nav nav-pills nav-stacked">
+		<li data-ng-click="changeView('cli','installation')">Installation</li>
+		<li data-ng-click="changeView('cli','help')">Help</li>
+		<li data-ng-click="changeView('cli','scaffolding')">Scaffolding</li>
+		<li data-ng-click="changeView('cli','docs')">Docs</li>
+		<li data-ng-click="changeView('cli','modules')">Modules</li>
+		<li data-ng-click="changeView('cli','packages')">Packages</li>
+		<li data-ng-click="changeView('cli','status')">Status</li>
+		<li data-ng-click="changeView('cli','users')">Users</li>
+	</ul>
+</accordion-group>
+
+
 <accordion-group heading="Overview">
 			<ul class="nav nav-pills nav-stacked">
 				<li data-ng-click="changeView('overview','system')">System</li>
 				<li data-ng-click="changeView('overview','auth')">Auth</li>
 				<li data-ng-click="changeView('overview','articles')">Articles</li>
 			</ul>
-</accordion-group>
-
-<accordion-group heading="Packages">
-	<ul class="nav nav-pills nav-stacked">
-		<li data-ng-click="changeView('modules','overview')">Overview</li>
-		<li data-ng-click="changeView('modules','first')">Your first package</li>
-		<li data-ng-click="changeView('modules','using')">Using Packages</li>
-		<li data-ng-click="changeView('modules','fs')">File Structure</li>
-		<li data-ng-click="changeView('modules','routes')">Express Routes</li>
-		<li data-ng-click="changeView('modules','menus')">Menus</li>
-		<li data-ng-click="changeView('modules','assets')">Assets (css/js)</li>
-		<li data-ng-click="changeView('modules','settings')">Settings</li>
-		<li data-ng-click="changeView('modules','dependencies')">Dependencies</li>
-		<li data-ng-click="changeView('modules','publishing')">Publishing</li>
-	</ul>
 </accordion-group>
 
 <accordion-group heading="Server Side">
@@ -54,85 +73,5 @@
 </accordion-group>
 
 
-<accordion-group heading="CLI">
-	<ul class="nav nav-pills nav-stacked">
-		<li data-ng-click="changeView('cli','installation')">Installation</li>
-		<li data-ng-click="changeView('cli','help')">Help</li>
-		<li data-ng-click="changeView('cli','scaffolding')">Scaffolding</li>
-		<li data-ng-click="changeView('cli','docs')">Docs</li>
-		<li data-ng-click="changeView('cli','modules')">Modules</li>
-		<li data-ng-click="changeView('cli','packages')">Packages</li>
-		<li data-ng-click="changeView('cli','status')">Status</li>
-		<li data-ng-click="changeView('cli','users')">Users</li>
-	</ul>
-</accordion-group>
-
 </nav>
 </accordion>
-<!--
-<h3>Tools</h3>
-	<ul class="nav nav-pills nav-stacked">
-		<li><a href="" data-ng-click="changeView('npm')">NPM</li>
-		<li><a href="" data-ng-click="changeView('bower')">Bower</li>
-		<li><a href="" data-ng-click="changeView('grunt')">Grunt</li>
-	</ul>
-
-
-
-<h3>Resources</h3>
-	<ul class="nav nav-pills nav-stacked">
-		<li><a href="http://scotch.io/bar-talk/setting-up-a-mean-stack-single-page-application">scotch.io</li>
-		<li><a href="http://code.tutsplus.com/tutorials/introduction-to-the-mean-stack--cms-19918">TutsPlus</li>
-		<li><a href="http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman">AddyOsmani</li>
-		<li><a href="http://javascriptjabber.com/092-jsj-the-mean-stack-with-ward-bell-and-valeri-karpov/">JS Jabber (audio)</li>
-	</ul>
-</nav>
--->
-
-<!--
-Assests
-Permission
-Best Practicies / Design principles
-	API module
-	cli + Server Module
-	Server only Module
-Getting Ready for production
-Dependencies
-Security
-Performance
-Common problems/ Troubleshooting
--->
-<!--
-<h3>Best Practices</h3>
-<ul>
-			<li>
-				<a href="#!/docs/#configuration">Configuration
-			</li>
-			<li>
-				<a href="#!/docs/#troubleshooting">Troubleshooting
-			</li>
-			<li>
-				<a href="#!/docs/#folder-structure">Folder Structure
-			</li>
-			<li>
-				<a href="#!/docs/#autoload">Autoloaded Files
-			</li>
-			<li>
-				<a href="#!/docs/#express">Express &amp; Routing
-			</li>
-			<li>
-				<a href="#!/docs/#backend-views">Backend Views
-			</li>
-			<li>
-				<a href="#!/docs/#server-tests">Server Tests
-			</li>
-			<li>
-				<a href="#!/docs/#angularjs-tests">AngularJS Tests
-			</li>
-			<li>
-				<a href="#!/docs/#angularjs-modules">AngularJS Modules
-			</li>
-			<li>
-				<a href="#!/docs/#article-example">The Article Example
-			</li>
--->

@@ -26,7 +26,14 @@ angular.module('mean.system').controller('DocsController', ['$scope', '$window',
     /////////
 
 
+    var hash = $location.hash();
+    var view = $location.path().replace('/docs/', '');
 
+    view = (view!='/docs')?view:'getting-started';
+    $scope.docs = {
+      anchor: hash,
+      view: 'views/docs/pages/' + view + '.html'
+    }
 
 
     //////
