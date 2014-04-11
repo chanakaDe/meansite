@@ -1,35 +1,49 @@
 <div ng-class="{'wrapper':slide === true , 'no-wrapper': slide === false }">
 
-
+<section id="getting-started-overview">
 <h2>Getting Started</h2>
-  <section id="getting-started-installation">
-  <h3>Installation</h3>
-  <div class="inner-link-anchor" id="installation"></div>
-  <p>2 minutes install</p>
-  <pre>
- > sudo npm install -g meanio  // Get the mean cmdline
- > mean init myApp             // create your first app
- > cd myApp && npm install     // Install dependencies
- > grunt                       // Launch mean
-  </pre>
+<p> <p>
+<p>The mean.io docs are designed to give you the tools to be up and running quickly while still providing a good
+understanding of the technologies used, the design philosophy and usage information. The documentation project is ongoing and never ending so feel free to let us know you feel needs to be added or if there is anything
+that is not clear. Enjoy!</p>
 </section>
 
-<section id="getting-started-prereq">
-<p class="alert alert-danger">Make sure mongodb is installed and running on port 27017 before you start</p>
+<section id="getting-started-installation">
+  <h2>Installation</h2>
+  <div class="inner-link-anchor" id="installation"></div>
+  <p>Installation is a two 2 minute process and will give you all the components you need to get started.</p>
+  <style>#install-procedure { height: 110px;font-size:16px;}</style>
+  <div id="install-procedure"ui-ace="{ mode:'text', theme:'monokai', showGutter:false}" readonly="true">
+  > sudo npm install -g meanio@latest  // Get the mean cmdline
+  > mean init myApp                    // create your first app
+  > cd myApp && npm install            // Install dependencies
+  > grunt                              // Launch mean
+  </div> 
 
-<h3>PreRequisites</h3>
+  <p class="alert alert-success">Congratulations! You are now a MEAN developer</p>
+
+</section>
+
+
+<section id="getting-started-prereq">
+
+<h2>PreRequisites</h2>
+
+<p>MEAN is an acronym for MongoDB, Express, AngularJs and NodeJs. Our install process does a lot but you still need some basic environement setup to use MEAN.</p>
 <strong>Node.js</strong>
-<p>Download and Install Node.js. You can also follow this gist for a quick and easy way to install Node.js and npm</p>
+<p>Download and Install Node.js</p>
 <strong>MongoDB</strong>
 <p>Download and Install MongoDB - Make sure it's running on the default port (27017).</p>
 <strong>NPM</strong><p>Node.js package manager, should be installed when you install node.js.</p>
-<stong>Bower</strong><p>Web package manager, installing Bower is simple when you have npm:</p>
+<strong>Bower</strong><p>Web package manager, installing Bower is simple when you have npm:</p>
 </section>
+<p class="alert alert-info">See the technologies section below for more details about the technologies mentioned above</p>
 
 <section id="getting-started-technologies">
 <h2>Technologies</h2>
+<p> <p>
 <section id="mongo">
-<h3>MongoDB</h3>
+<h4><strong>MongoDB</strong></h4>
 <div style="background-color:#402817; padding:10px" class="infograph">
   <img src="http://media.mongodb.org/logo-mongodb-header.png"></img>
 </div>
@@ -60,7 +74,7 @@ high availability, and easy scalability.
 </section>
 <hr/>
 
-<h3>Express</h3>
+<h4><strong>Express</strong></h3>
 <section id="express">
   <h4>Web Applications</h4>
   <ul>
@@ -84,7 +98,7 @@ high availability, and easy scalability.
 <div class="infograph">
   <img src="http://angularjs.org/img/AngularJS-large.png"></img>
 </div>
-<h3>Angular.js</h3>
+<h4><strong>Angular.js</strong></h4>
 <p>AngularJS lets you write client-side web applications as if you had a smarter browser.<br/>
 It lets you use good old HTML (or HAML, Jade and friends!) as your template language and lets you extend HTML’s syntax to express your application’s components clearly and succinctly.<br/>
 It automatically synchronizes data from your UI (view) with your JavaScript objects (model) through 2-way data binding.<br/>
@@ -102,7 +116,7 @@ The best of all: it makes development fun!</p>
 <div class="infograph">
   <img style="width:300px;" src="http://nodejs.org/images/logo-light.svg"></img>
 </div>
-<h3>Node.js</h3>
+<h4><strong>Node.js</strong></h4>
   Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.<br/>
   Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.<br/>
 </p>
@@ -116,7 +130,7 @@ The best of all: it makes development fun!</p>
   <img style="width:300px;" src="http://www.revillweb.com/wp-content/uploads/2013/12/twitter-bootstrap.jpg
 "></img>
 </div>
-<h3>Twitter Bootstrap</h3>
+<h4><strong>Twitter Bootstrap</strong></h4>
 <h4>Designed for everyone, everywhere.</h4>
 <ul>
 <li><p>Bootstrap makes front-end web development faster and easier.
