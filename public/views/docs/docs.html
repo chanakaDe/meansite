@@ -17,6 +17,15 @@
                                     </ul>
                                 </accordion-group>
 
+                                <accordion-group id="filestructure-group" heading="File Structure" is-open="true">
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li class="active"><a href="#file-structure-server" prevent-default="" scroll-to="file-structure-server">Server side code</a></li>                                         
+                                        <li class="active"><a href="#file-structure-client" prevent-default="" scroll-to="file-structure-client">Client side code</a></li>
+                                        <li class="active"><a href="#file-structure-config" prevent-default="" scroll-to="file-structure-config">Configuration files</a></li>  
+                                        <li class="active"><a href="#file-structure-packages" prevent-default="" scroll-to="file-structure-packages">Packages code</a></li>  
+                                    </ul>
+                                </accordion-group>
+
                                 <accordion-group id="packages-group"heading="Packages" is-open="false">
                                     <ul class="nav nav-pills nav-stacked">
                                         <li class=""><a href="#packages-overview" prevent-default="" scroll-to="packages-overview">Overview</a></li>
@@ -58,7 +67,8 @@
             <section class="col-md-10 col-md-offset-2">
 
 <!--                 <div id="scroller" scroll-spy="" data-target="#navPills">
- -->               <div data-ng-include="'views/docs/pages/getting-started.html'"></div>
+ -->              <div data-ng-include="'views/docs/pages/getting-started.html'"></div>
+                  <div data-ng-include="'views/docs/pages/filestructure.html'"></div> 
                   <div data-ng-include="'views/docs/pages/packages.html'"></div>
                   <div data-ng-include="'views/docs/pages/cli.html'"></div>
 
