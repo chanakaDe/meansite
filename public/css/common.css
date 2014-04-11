@@ -237,3 +237,8 @@ footer .footer-right-menu-text {
     height: 200px;
     overflow: auto;
 }
+
+.nav-docs .nav-pills > li.active > a,.nav-docs .nav-pills > li.active > a:hover,.nav-docs .nav-pills > li.active > a:focus {
+background-color:#fff;
+text-decoration:underline;
+} 
