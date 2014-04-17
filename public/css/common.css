@@ -156,7 +156,7 @@ footer .footer-right-menu-text {
     float:right;
 }
 .sidebar .meandevelopment {
-    margin-top:-456px;
+    margin-top:-275px;
     margin-bottom:9px;
     height:125px;
 }
@@ -167,12 +167,13 @@ footer .footer-right-menu-text {
     height:135px;
     color:white;
     font-size: 23px;
-    text-align: center;
-    padding-right:130px;
+    text-align: left;
+    padding-left:10px;
+    padding-right:10px;
     padding-top:55px;
 }
 .gettingstarted {
-    width:700px;
+    width:800px;
     margin-bottom:100px;
 }
 .block {
@@ -287,7 +288,7 @@ footer .footer-right-menu-text {
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 30px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
 		opacity:1;
 }
@@ -299,9 +300,16 @@ footer .footer-right-menu-text {
 #docs .nav-docs .nav li.active .nav {
     display: block;
 		/*border: 2px solid #0f96ba;*/
+		/*
 		-moz-box-shadow:    0px 0px 5px 2px #0f96ba;
   	-webkit-box-shadow: 0px 0px 5px 2px #0f96ba;
   	box-shadow:         0px 0px 5px 2px #0f96ba;
+		*/
+	-webkit-transition: 0.3s linear all;
+	-moz-transition: 0.3s linear all;
+	-o-transition: 0.3s linear all;
+	transition: 0.3s linear all;
+
 		width:100%;
 		padding: 0px;
 }
@@ -313,3 +321,30 @@ footer .footer-right-menu-text {
     padding-left: 28px;
     color:#fff;
 }
+#tweets1 {
+	width:100%;
+}
+
+#tweets1 .twitter-tweet {
+  float:left;
+  margin: 5px !important;
+  width: 250px;
+}
+
+#quick-paste{
+  margin-left:20px;
+  float:left;
+  box-shadow: 0px 0px 5px 0px #fff;
+  height: 60px;
+  font-size:16px;
+  width:300px;
+  color:#fd8e00;
+}
+#quick-paste .ace_line:first-child {
+  margin-top:8px;
+}
+
+
+#quickstart {margin-top:100px;}
+#quickstart h4 {margin-top:20px;font-size:1.6em; float:left;margin-top:20px;}
+#quickstart .banner-top-subtitle{float:left;}
