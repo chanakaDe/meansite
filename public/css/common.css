@@ -154,6 +154,7 @@ footer .footer-right-menu-text {
 .sidebar {
     width:320px;
     float:right;
+    margin-top: 355px;
 }
 .sidebar .meandevelopment {
     margin-top:-255px;
@@ -167,13 +168,15 @@ footer .footer-right-menu-text {
     height:135px;
     color:white;
     font-size: 23px;
-    text-align: center;
-    padding-right:130px;
+    text-align: left;
+    padding-left:10px;
+    padding-right:10px;
     padding-top:55px;
 }
 .gettingstarted {
     width:800px;
     margin-bottom:100px;
+    float: left;
 }
 .block {
     margin-bottom:20px;
@@ -304,6 +307,11 @@ footer .footer-right-menu-text {
   	-webkit-box-shadow: 0px 0px 5px 2px #0f96ba;
   	box-shadow:         0px 0px 5px 2px #0f96ba;
 */
+	-webkit-transition: 0.3s linear all;
+	-moz-transition: 0.3s linear all;
+	-o-transition: 0.3s linear all;
+	transition: 0.3s linear all;
+
 		width:100%;
 		padding: 0px;
 }
@@ -315,9 +323,10 @@ footer .footer-right-menu-text {
     padding-left: 28px;
     color:#fff;
 }
-
 #tweets1 {
-  width:100%;
+	width:100%;
+    margin-left: 17px;
+    margin-top: 15px;
 }
 
 #tweets1 .twitter-tweet {
