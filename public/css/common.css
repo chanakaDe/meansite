@@ -154,9 +154,10 @@ footer .footer-right-menu-text {
 .sidebar {
     width:320px;
     float:right;
+    margin-top: 355px;
 }
 .sidebar .meandevelopment {
-    margin-top:-275px;
+    margin-top:-297px;
     margin-bottom:9px;
     height:125px;
 }
@@ -175,6 +176,7 @@ footer .footer-right-menu-text {
 .gettingstarted {
     width:800px;
     margin-bottom:100px;
+    float: left;
 }
 .block {
     margin-bottom:20px;
@@ -323,6 +325,8 @@ footer .footer-right-menu-text {
 }
 #tweets1 {
 	width:100%;
+    margin-left: 17px;
+    margin-top: 15px;
 }
 
 #tweets1 .twitter-tweet {
