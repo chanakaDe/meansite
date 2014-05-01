@@ -154,7 +154,7 @@ footer .footer-right-menu-text {
 .sidebar {
     width:320px;
     float:right;
-    margin-top: 355px;
+    margin-top: 198px;
 }
 .sidebar .meandevelopment {
     margin-top:-255px;
@@ -169,9 +169,10 @@ footer .footer-right-menu-text {
     color:white;
     font-size: 23px;
     text-align: left;
-    padding-left:10px;
+    padding-left:31px;
     padding-right:10px;
     padding-top:55px;
+    margin-left: 21px;
 }
 .gettingstarted {
     width:800px;
@@ -336,19 +337,26 @@ footer .footer-right-menu-text {
 }
 
 #quick-paste{
-  margin-left:20px;
-  float:left;
+  /*margin-left:20px;*/
+  /*float:left;*/
+  clear: both;
   box-shadow: 0px 0px 5px 0px #fff;
-  height: 60px;
-  font-size:16px;
-  width:300px;
-  color:#fd8e00;
+  height: 64px;
+  font-size:19px;
+  width:430px;
+  opacity: 0.6;
+  background-color: #001C2A;
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+  padding-top: 7px;
 }
 #quick-paste .ace_line:first-child {
   margin-top:8px;
 }
 
+#quick-paste.ace-monokai{
+    background-color: #001429 !important;
+}
 
-#quickstart {margin-top:100px;}
-#quickstart h4 {margin-top:20px;font-size:1.6em; float:left;margin-top:20px;}
+#quickstart {margin-top:50px;}
+#quickstart h4 {margin-top:20px;font-size:1.6em; float:left;margin-bottom: 10px;}
 #quickstart .banner-top-subtitle{float:left;}
