@@ -54,7 +54,8 @@ a.green-text:hover {
 }
 footer {
     border: none;
-    background: url('/img/backgrounds/footer-bg.png') center bottom repeat-x;
+    background-image:url('/img/backgrounds/footer-bg.png') ;
+    background-color:white;
     height: 190px;
 }
 footer .container {
@@ -65,7 +66,7 @@ footer .footer-left-menu-container {
     float: left;
     width: 25%;
     margin: 0;
-    padding: 0;
+    padding: 56px;
 }
 footer .footer-left-menu {
     margin: 20px 30px;
