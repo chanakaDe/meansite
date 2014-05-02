@@ -78,11 +78,15 @@
 <section id="cli-packages">
  <h2>Scaffolding Custom Packages</h2>
 
-	<p>The CLI provides a scaffolding function to create your own MEAN Packages. For more information, see the packages page.</p>
+	<p>The CLI provides a scaffolding function to create (or remove) your own MEAN Packages. For more information, see the packages page.</p>
 	<pre>
 	$ mean package &lt;name&gt;
 	</pre>
-	<p class="alert alert-info">Mean packages are created in <i>/modules</i></p>
+	<p>To remove, use the <code>-d</code> (or <code>--delete</code>) flag.</p>
+	<pre>
+	$ mean package -d &lt;name&gt;
+	</pre>
+	<p class="alert alert-info">Mean packages are created in <i>/packages</i></p>
 	<p class="alert alert-warning">Mean versions prior to 0.3.2 store packages in /node_modules</p>
 </section>
 
