@@ -123,11 +123,9 @@ position:fixed;
 slider { 
   position: relative;
   display: inline-block;
-  width: 101.5%;
-  height: 514px;
+  width: 100.5%;
+  height: 600px;
   overflow: hidden;
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 9px;
 }
 
 slide1 { 
