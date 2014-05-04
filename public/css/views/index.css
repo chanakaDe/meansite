@@ -128,8 +128,8 @@ position:fixed;
 slider { 
   position: relative;
   display: inline-block;
-  width: 101.5%;
-  height: 553px;
+  width: 100.5%;
+  height: 600px;
   overflow: hidden;
 }
 

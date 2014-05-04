@@ -54,9 +54,9 @@ a.green-text:hover {
 }
 footer {
     border: none;
-    background: url('/img/backgrounds/footer-bg.png') center bottom repeat-x;
-    height: 130px;
-    box-shadow: inset 0 3px 5px 0 rgba(50, 50, 50, 0.75);
+    background-image:url('/img/backgrounds/footer-bg.png') ;
+    background-color:white;
+    height: 190px;
 }
 footer .container {
     height: 100%;
@@ -66,7 +66,7 @@ footer .footer-left-menu-container {
     float: left;
     width: 25%;
     margin: 0;
-    padding: 0;
+    padding: 56px;
 }
 footer .footer-left-menu {
     margin: 20px 30px;
@@ -87,7 +87,7 @@ footer .footer-middle-container {
     line-height: 130px;
     float: left;
     width: 50%;
-    margin: 0;
+    margin-top: 60px;
     text-align: center;
     vertical-align: middle;
 }
@@ -111,11 +111,10 @@ footer .footer-middle-text a:hover {
     text-decoration: none;
 }
 footer .footer-right-menu-container {
-    height: 100%;
-    float: right;
-    width: 25%;
-    margin: 0;
-    text-align: center;
+   float: right;
+   width: 25%;
+   margin-top: 70px;
+   text-align: center;
 }
 footer .footer-right-menu {
     margin-top: 30px;
@@ -154,12 +153,12 @@ footer .footer-right-menu-text {
 .sidebar {
     width:320px;
     float:right;
-    margin-top: 198px;
+    margin-top: -57px;;
 }
 .sidebar .meandevelopment {
-    margin-top:-255px;
     margin-bottom:9px;
     height:125px;
+    margin-left: -42px;
 }
 .sidebar .meandevelopment a {
     background: url(../../img/ninja/mean-dev-button.png) no-repeat;
