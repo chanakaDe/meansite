@@ -72,6 +72,19 @@ box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.75);
 	color: #0f96ba;
 	font-weight: 200;
 	margin: 30px 0 30px 0;
+  display: inline-block;
+}
+.gettingstarted .tweet {
+  float: right;
+  margin-top: 45px;
+  margin-right: 10px;
+}
+.gettingstarted .tweet a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #187C96;
+  font-size: 17px;
+  font-family: 'Bitter', serif;
 }
 .banner-technologies-subtitle {
 	color: #1f1f1f;
@@ -133,6 +146,25 @@ slider {
   overflow: hidden;
 }
 
+slider input[type="radio"] {
+  width: 8px;
+  height: 8px;
+  margin-top: 520px;
+  background-color: #CBCBCB;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+}
+input[type="radio"]:checked {
+    background-color: #0F7B9C;
+    border-radius: 10px;
+    border: none;
+}
+slider input[type="radio"]:nth-of-type(1) {
+  margin-left: 380px;
+}
+
 slide1 { 
   width: 800px;
   height: 500px;
@@ -140,7 +172,7 @@ slide1 {
 
 /* -- 2 slider:treger -- */
 
-[slide-target] { width: 0; height: 0; margin: 0; }
+/*[slide-target] { width: 0; height: 0; margin: 0; }*/
 [slide-target]:before,[slide-target]:after {
   position: absolute;
   top: 50%;
@@ -209,6 +241,3 @@ display: block;
   left:0;
   z-index: 5;
 }
-
-
-
