@@ -156,7 +156,7 @@ footer .footer-right-menu-text {
     margin-top: -57px;;
 }
 .sidebar .meandevelopment {
-    margin-bottom:9px;
+    margin-bottom:46px;
     height:125px;
     margin-left: -42px;
     font-family: 'Bitter', serif;
@@ -174,6 +174,7 @@ footer .footer-right-menu-text {
     padding-top:55px;
     margin-left: 21px;
 }
+
 .gettingstarted {
     width:800px;
     margin-bottom:100px;
@@ -217,6 +218,10 @@ footer .footer-right-menu-text {
     font-size: 20px;
     padding-top: 22px;
     padding-left: 12px;
+}
+.block .mean-channel a{
+	color:#fff;
+
 }
 .block .channel-btn {
     width: 38px;
@@ -403,3 +408,5 @@ footer .footer-right-menu-text {
 #quickstart {margin-top:50px;}
 #quickstart h4 {margin-top:20px;font-size:1.6em; float:left;margin-bottom: 10px;}
 #quickstart .banner-top-subtitle{float:left;}
+
+
