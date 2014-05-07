@@ -22,7 +22,7 @@
 }
 .banner-top-subtitle {
     margin: 20px 0;
-    text-shadow: 1px 1px 1px #555;
+    font-size: 20px;
     font-weight: normal;
 }
 a.banner-top-download-button {
@@ -70,7 +70,7 @@ box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.75);
 }
 .banner-technologies-title {
 	color: #0f96ba;
-	font-weight: 200;
+	font-weight: lighter;
 	margin: 30px 0 30px 0;
   display: inline-block;
 }
@@ -97,7 +97,7 @@ box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.75);
 }
 .banner-technologies-inner-technologies li{
 	display: inline-block;
-	vertical-align: bottom;
+	vertical-align: middle;
 	width: 21%;
 	margin-left: 4%;
 }
@@ -118,6 +118,7 @@ margin-left:6px;
 ul.unstyled,
 ol.unstyled {
   margin-left: 0;
+  margin-right: 50px;
   list-style: none;
 }
 #docs h3{

@@ -90,6 +90,7 @@ footer .footer-middle-container {
     margin-top: 60px;
     text-align: center;
     vertical-align: middle;
+    margin-left: -106px;
 }
 footer .footer-middle-ninja {
     width: 80px;
@@ -113,7 +114,8 @@ footer .footer-middle-text a:hover {
 footer .footer-right-menu-container {
    float: right;
    width: 25%;
-   margin-top: 70px;
+   margin-top: 60px;
+   margin-right: 94px;
    text-align: center;
 }
 footer .footer-right-menu {
@@ -168,14 +170,17 @@ footer .footer-right-menu-text {
     width:339px;
     height:135px;
     color:white;
-    font-size: 23px;
+    font-size: 18px;
     text-align: left;
     padding-left:31px;
     padding-right:10px;
     padding-top:55px;
     margin-left: 21px;
 }
-
+.sidebar .meandevelopment a span {
+    font-size: 27px;
+}
+ 
 .gettingstarted {
     width:800px;
     margin-bottom:100px;
@@ -397,6 +402,7 @@ footer .footer-right-menu-text {
   background-color: #001C2A;
   font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
   padding-top: 7px;
+  box-shadow: inset 0px 11px 8px -10px #090A1B, inset 0px -11px 8px -10px #555;
 }
 #quick-paste .ace_line:first-child {
   margin-top:8px;
