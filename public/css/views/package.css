@@ -1,0 +1,41 @@
+.modulesContent {
+	margin-left: 12%;
+	width: 76%;
+	padding-top: 20px;
+}
+.modulesTitle {
+	color: #0086a4;
+	font-size: 24px;
+}
+.packagesList tr {
+	border-bottom: 1px solid #E1E1E1;	
+	background-color: #FFFFFF;	
+}
+.packagesList th, .packagesList td {
+	padding: 5px 10px;
+}
+.packagesList .consoleText {
+	background-color: #FAF6F5;
+	padding: 9px;
+}
+.packagesList .name {
+	text-transform: uppercase;
+}
+.packagesList .name a {
+	color: #000000;
+	text-decoration: none;
+}
+.packagesList .price {
+	color: #F68B01;
+	text-transform: uppercase;
+}
+.consoleText {
+	font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace
+}
+.packageView {
+	width: 217px;
+	height: 264px;
+}
+.packageView span {
+	font-size: 13px;
+}

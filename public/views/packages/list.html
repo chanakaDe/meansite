@@ -1,0 +1,64 @@
+<section id="docs" class="content">
+    <section class="container" data-ng-controller="PackageController" data-ng-init="all()">
+        <div class="modulesContent">
+            <h4 class="modulesTitle">All Modules</h4>
+            <table class="packagesList">
+                <!-- <thead> -->
+                    <!-- <tr>
+                        <th>name</th>
+                        <th>author</th>
+                        <th>description</th>
+                        <th>summary</th>
+                        <th>command</th>
+                        <th>npmlink</th>
+                        <th>githublink</th>
+                        <th>rating</th>
+                        <th>thumbnail</th>
+                        <th>screenshots</th>
+                        <th>price</th>
+                    </tr> -->
+                <!-- </thead> -->
+                <tbody>
+                    <tr data-ng-repeat="package in packages">
+                        <td class="name">
+                            <a data-ng-href="#!/packages/{{package._id}}"><b>{{package.name}}</b></a>
+                        </td>
+                        <td>{{package.author}}</td>
+                        <td>{{package.description}}</td>
+                        <td>{{package.summary}}</td>
+                        <td>
+                            <span class="consoleText">$ {{package.command}}</span>
+                        </td>
+                        <td>
+                            <a href="{{package.npmlink}}">
+                                <img src="/img/package/npmLink.jpg">
+                            </a>
+                        </td>
+                        <td>
+                        <a href="{{package.githublink}}">
+                            <img src="/img/package/githubLink.jpg">
+                        </a>
+                        </td>
+                        <td>
+                            <img src="/img/package/yellowStar.jpg">
+                            <img src="/img/package/yellowStar.jpg">
+                            <img src="/img/package/yellowStar.jpg">
+                            <img src="/img/package/yellowStar.jpg">
+                            <img src="/img/package/grayStar.jpg">
+                            <!-- {{package.rating}} -->
+                        </td>
+                        <td>
+                             <img height="40" src="{{package.thumbnail}}">
+                        </td>
+                        <td data-ng-repeat="screenshot in package.screenshots">
+                            <img height="40" src="{{screenshot}}">            
+                        </td>
+                        <td class="price">{{package.price}}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <a href="#!/packages/create">Create New Package</a>
+        </div>
+    </section>
+</section>
