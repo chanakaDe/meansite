@@ -50,8 +50,8 @@
                         <td>
                              <img height="40" src="{{package.thumbnail}}">
                         </td>
-                        <td data-ng-repeat="screenshot in package.screenshots">
-                            <img height="40" src="{{screenshot}}">            
+                        <td>
+                            <img data-ng-repeat="screenshot in package.screenshots" height="40" src="{{screenshot}}">
                         </td>
                         <td class="price">{{package.price}}</td>
                         

@@ -34,7 +34,7 @@ angular.module('mean').controller('PackageController', ['$scope', '$routeParams'
 
         $scope.show = function() {
             Packages.get({
-                packageId: $stateParams.packageId
+                packageId: $routeParams.packageId
             }, function(currentPackage) {
                 $scope.package = currentPackage;
             });
