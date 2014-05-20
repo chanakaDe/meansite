@@ -368,7 +368,7 @@ footer .footer-right-menu-text {
 #tweets1 .twitter-tweet {
     float:left;
     margin: 5px !important;
-    width: 250px;
+    width: 250px !important;
 }
 #quick-paste {
     /*margin-left:20px;*/
