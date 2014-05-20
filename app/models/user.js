@@ -17,6 +17,10 @@ var UserSchema = new Schema({
         type: String,
         unique: true
     },
+    roles: {
+        type: Array,
+        default: ['authenticated']
+    },
     hashed_password: String,
     provider: String,
     salt: String,
@@ -87,6 +91,17 @@ UserSchema.pre('save', function(next) {
  * Methods
  */
 UserSchema.methods = {
+    /**
+     * HasRole - check if the user has required role
+     *
+     * @param {String} plainText
+     * @return {Boolean}
+     * @api public
+     */
+    hasRole: function(role) {
+        var roles = this.roles;
+        return (roles.indexOf('admin') !== -1 || roles.indexOf(role) !== -1);
+    },
     /**
      * Authenticate - check if the passwords are the same
      *

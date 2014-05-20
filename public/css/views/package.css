@@ -1,4 +1,14 @@
-.modulesContent {
+.modulesTopBanner {
+	background: url('/img/package/blue-header.jpg');
+	height: 130px;
+	width: 100%;
+	margin-top: 50px;
+	color: #FFFFFF;
+	padding-left: 12%;
+	padding-top: 20px;
+	font-weight: bold;
+}
+.modulesContent, .packageView {
 	margin-left: 12%;
 	width: 76%;
 	padding-top: 20px;
@@ -14,10 +24,6 @@
 .packagesList th, .packagesList td {
 	padding: 5px 10px;
 }
-.packagesList .consoleText {
-	background-color: #FAF6F5;
-	padding: 9px;
-}
 .packagesList .name {
 	text-transform: uppercase;
 }
@@ -25,17 +31,38 @@
 	color: #000000;
 	text-decoration: none;
 }
-.packagesList .price {
+.price {
 	color: #F68B01;
 	text-transform: uppercase;
 }
 .consoleText {
-	font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace
+	font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+	background-color: #FAF6F5;
+	padding: 9px;
+}
+.author {
+	color: #FF9001;
 }
 .packageView {
-	width: 217px;
-	height: 264px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-.packageView span {
-	font-size: 13px;
+.packageView .info {
+	background-color: #FFFFFF;
+	padding: 20px;
+	width: 650px;
+	float: left;
+}
+.packageView .moreInfo {
+	background-color: #FFFFFF;
+	float: right;
+	height: 240px;
+	width: 240px;
+	text-align: center;
+	padding-top: 15px;
+}
+.packageView .moreInfo div {
+	width: 45%;
+	display: inline-block;
+	margin-top: 20px
 }

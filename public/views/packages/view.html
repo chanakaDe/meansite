@@ -1,0 +1,32 @@
+<section class="content" data-ng-controller="PackageController" data-ng-init="show()">
+    <div class="modulesTopBanner">
+    	<h1>{{package.name}}</h1>
+    	by <span class="author">{{package.author}}</span>
+    </div>
+    <div class="packageView">
+    	<div class="info">
+    		<p>{{package.description}}</p>
+    		<br/>
+    		<span class="consoleText">$ {{package.command}}</span>
+    	</div>
+		<div class="moreInfo">
+			<img height="150" src="{{package.thumbnail}}"><br/>
+				<div>
+					<b>RATING</b>
+					<br/>
+					<img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/grayStar.jpg">
+                </div>
+	    		<div>
+	    			<b>PRICE</b>
+	    			<br/>
+	    			<span class="price">{{package.price}}</span>
+	    		</div>
+		</div>
+		<div>{{package.githublink}}</div>
+		<div style="clear:both;"></div>
+    </div>    
+</section>

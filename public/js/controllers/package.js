@@ -1,11 +1,9 @@
 'use strict';
 angular.module('mean').controller('PackageController', ['$scope', '$routeParams', '$location', 'Global','Packages',
     function($scope, $routeParams, $location, Global, Packages) {
-        console.log("package controller");
-        // $scope.global = Global;
+        $scope.global = Global;
 
         $scope.create = function() {
-            console.log("this is create method");
             var newPackage = new Packages({
                 name: this.name,
                 author: this.author,
@@ -28,7 +26,6 @@ angular.module('mean').controller('PackageController', ['$scope', '$routeParams'
         $scope.all = function() {
             Packages.query(function(packages) {
                 $scope.packages = packages;
-                console.log($scope.packages)
             });
         };
 

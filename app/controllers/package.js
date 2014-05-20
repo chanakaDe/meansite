@@ -73,7 +73,7 @@ exports.show = function(req, res) {
  * List of Packages
  */
 exports.all = function(req, res) {
-    Package.find().sort('-created').exec(function(err, packages) {
+    Package.find().sort('created').exec(function(err, packages) {
         if (err) {
             res.render('error', {
                 status: 500
