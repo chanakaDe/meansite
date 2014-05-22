@@ -31,6 +31,7 @@ var PackageSchema = new Schema({
     command: String,
     npmlink: String,
     githublink: String,
+    youtubelink: String,
     rating: String,
     thumbnail: String,
     screenshots: [String],

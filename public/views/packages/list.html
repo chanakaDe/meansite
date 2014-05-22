@@ -1,27 +1,16 @@
 <section class="content" data-ng-controller="PackageController" data-ng-init="all()">
     <div class="modulesTopBanner">
         <h1>Modules</h1>
+        <div class="col-xs-3">
+            <input type="text" class="form-control" placeholder="Search Modules" ng-model="modulesFilter">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
     </div>
     <div class="modulesContent">
         <h4 class="modulesTitle">All Modules</h4>
         <table class="packagesList">
-            <!-- <thead> -->
-                <!-- <tr>
-                    <th>name</th>
-                    <th>author</th>
-                    <th>description</th>
-                    <th>summary</th>
-                    <th>command</th>
-                    <th>npmlink</th>
-                    <th>githublink</th>
-                    <th>rating</th>
-                    <th>thumbnail</th>
-                    <th>screenshots</th>
-                    <th>price</th>
-                </tr> -->
-            <!-- </thead> -->
             <tbody>
-                <tr data-ng-repeat="package in packages">
+                <tr data-ng-repeat="package in packages | filter:modulesFilter">
                     <td class="name">
                         <a data-ng-href="#!/packages/{{package._id}}"><b>{{package.name}}</b></a>
                     </td>
@@ -29,7 +18,7 @@
                     <td>{{package.description}}</td>
                     <td>{{package.summary}}</td>
                     <td>
-                        <span class="consoleText">$ {{package.command}}</span>
+                        <span class="consoleText oneLine">$ {{package.command}}</span>
                     </td>
                     <td>
                         <a href="{{package.npmlink}}">
@@ -37,11 +26,11 @@
                         </a>
                     </td>
                     <td>
-                    <a href="{{package.githublink}}">
-                        <img src="/img/package/githubLink.jpg">
-                    </a>
+                        <a href="{{package.githublink}}">
+                            <img src="/img/package/githubLink.jpg">
+                        </a>
                     </td>
-                    <td>
+                    <td class="oneLine">
                         <img src="/img/package/yellowStar.jpg">
                         <img src="/img/package/yellowStar.jpg">
                         <img src="/img/package/yellowStar.jpg">
@@ -52,9 +41,9 @@
                     <td>
                          <img height="40" src="{{package.thumbnail}}">
                     </td>
-                    <td>
+                    <!-- <td>
                         <img data-ng-repeat="screenshot in package.screenshots" height="40" src="{{screenshot}}">
-                    </td>
+                    </td> -->
                     <td class="price">{{package.price}}</td>
                     
                 </tr>

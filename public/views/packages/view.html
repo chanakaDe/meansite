@@ -1,32 +1,63 @@
 <section class="content" data-ng-controller="PackageController" data-ng-init="show()">
     <div class="modulesTopBanner">
     	<h1>{{package.name}}</h1>
-    	by <span class="author">{{package.author}}</span>
+        by <span class="author">{{package.author}}</span>
     </div>
     <div class="packageView">
-    	<div class="info">
-    		<p>{{package.description}}</p>
-    		<br/>
-    		<span class="consoleText">$ {{package.command}}</span>
-    	</div>
-		<div class="moreInfo">
-			<img height="150" src="{{package.thumbnail}}"><br/>
-				<div>
-					<b>RATING</b>
-					<br/>
-					<img src="/img/package/yellowStar.jpg">
-                    <img src="/img/package/yellowStar.jpg">
-                    <img src="/img/package/yellowStar.jpg">
-                    <img src="/img/package/yellowStar.jpg">
-                    <img src="/img/package/grayStar.jpg">
-                </div>
-	    		<div>
-	    			<b>PRICE</b>
-	    			<br/>
-	    			<span class="price">{{package.price}}</span>
-	    		</div>
-		</div>
-		<div>{{package.githublink}}</div>
-		<div style="clear:both;"></div>
+    	<div class="col-md-9 ">
+            <div class="info">
+        		<p>{{package.description}}</p>
+        		<br/>
+        		<span class="consoleText">$ {{package.command}}</span>
+        	</div>
+
+            <div class="media" data-ng-if="package.youtubelink || package.screenshots[0]">
+                <h4 class="modulesTitle">Media Gallery</h4>
+                <iframe data-ng-if="package.youtubelink" ng-src="{{getEmbedYTVideo(package.youtubelink)}}" allowfullscreen frameborder="0"></iframe>
+                <slider data-ng-if="package.screenshots[0]">
+                    <input slide-target type="radio" name="groupName" checked> 
+                    <slide1>
+                        <div class="screenshot">
+                            <img ng-src="{{package.screenshots[0]}}">
+                        </div>
+                        <div class="screenshot">
+                            <img ng-src="{{package.screenshots[1]}}">
+                        </div>
+                    </slide1>
+                    <input ng-repeat-start="screenshot in package.screenshots" ng-if="$index >= 2 && $index % 2 == 0" slide-target type="radio" name="groupName"> 
+                    <slide1 ng-repeat-end ng-if="$index >= 2 && $index % 2 == 0">
+                        <div class="screenshot">
+                            <img ng-src="{{screenshot}}">
+                        </div>
+                        <div class="screenshot" data-ng-if="package.screenshots[$index + 1]">
+                            <img ng-src="{{package.screenshots[$index + 1]}}">
+                        </div>
+                    </slide1>
+                </slider>
+            </div>
+        </div>
+        <div class="col-md-3">
+    		<div class="moreInfo">
+    			<img height="150" src="{{package.thumbnail}}"><br/>
+    				<div>
+    					<b>RATING</b>
+    					<br/>
+    					<img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/grayStar.jpg">
+                    </div>
+    	    		<div>
+    	    			<b>PRICE</b>
+    	    			<br/>
+    	    			<span class="price">{{package.price}}</span>
+    	    		</div>
+    		</div>
+            <a href="{{package.githublink}}" class="githubForkLink">
+                <img src="/img/package/git-banner.jpg">
+            </a>
+        </div>
+    	<div style="clear:both;"></div>
     </div>    
 </section>

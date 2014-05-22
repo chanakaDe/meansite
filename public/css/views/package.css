@@ -5,8 +5,19 @@
 	margin-top: 50px;
 	color: #FFFFFF;
 	padding-left: 12%;
+	padding-right: 12%;
 	padding-top: 20px;
 	font-weight: bold;
+}
+.modulesTopBanner div{
+	float: right;
+	display: table;
+	margin-top: -45px;
+}
+.modulesTopBanner .glyphicon {
+	color: #000000;
+	display: table-cell;
+	left: -25px;
 }
 .modulesContent, .packageView {
 	margin-left: 12%;
@@ -50,19 +61,54 @@
 .packageView .info {
 	background-color: #FFFFFF;
 	padding: 20px;
-	width: 650px;
-	float: left;
+	width: 90%;
+}
+.packageView .media {
+	width: 90%;
+}
+.packageView .media iframe {
+	width: 100%;
+	height: 380px;
 }
 .packageView .moreInfo {
 	background-color: #FFFFFF;
-	float: right;
 	height: 240px;
 	width: 240px;
 	text-align: center;
 	padding-top: 15px;
+	margin-bottom: 10px;
 }
 .packageView .moreInfo div {
 	width: 45%;
 	display: inline-block;
-	margin-top: 20px
+	margin-top: 20px;
+}
+.packageView .githubForkLink {
+	margin-top: 20px;
+}
+.packageView slider {
+	width: 100%;
+	height: 115px;
+	text-align: center;
+}
+.packageView slider input[type="radio"] {
+	margin: 105px 0 0 0;
+}
+.packageView slider slide1 {
+	width: 100%;
+	max-height: 100px;
+}
+.packageView slide1 .screenshot {
+	float: left;
+	width: 50%;
+	height: 100%;
+	border-left: 5px solid #eee;
+}
+.packageView slide1 img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.oneLine {
+	overflow: hidden;
+    white-space: nowrap;
 }
