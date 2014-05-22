@@ -18,7 +18,7 @@
                     <td>{{package.description}}</td>
                     <td>{{package.summary}}</td>
                     <td>
-                        <span class="consoleText oneLine">$ {{package.command}}</span>
+                        <span data-ng-if="package.command" class="consoleText oneLine">$ {{package.command}}</span>
                     </td>
                     <td>
                         <a href="{{package.npmlink}}">
@@ -39,10 +39,10 @@
                         <!-- {{package.rating}} -->
                     </td>
                     <td>
-                         <img height="40" src="{{package.thumbnail}}">
+                         <img height="40" ng-src="{{package.thumbnail}}">
                     </td>
                     <!-- <td>
-                        <img data-ng-repeat="screenshot in package.screenshots" height="40" src="{{screenshot}}">
+                        <img data-ng-repeat="screenshot in package.screenshots" height="40" ng-src="{{screenshot}}">
                     </td> -->
                     <td class="price">{{package.price}}</td>
                     

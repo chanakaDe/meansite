@@ -7,8 +7,9 @@
     	<div class="col-md-9 ">
             <div class="info">
         		<p>{{package.description}}</p>
+                <p>{{package.summary}}</p>
         		<br/>
-        		<span class="consoleText">$ {{package.command}}</span>
+                <span data-ng-if="package.command" class="consoleText">$ {{package.command}}</span>
         	</div>
 
             <div class="media" data-ng-if="package.youtubelink || package.screenshots[0]">
@@ -38,7 +39,7 @@
         </div>
         <div class="col-md-3">
     		<div class="moreInfo">
-    			<img height="150" src="{{package.thumbnail}}"><br/>
+    			<img height="150" ng-src="{{package.thumbnail}}"><br/>
     				<div>
     					<b>RATING</b>
     					<br/>

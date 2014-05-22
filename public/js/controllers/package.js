@@ -15,7 +15,7 @@ angular.module('mean').controller('PackageController', ['$scope', '$routeParams'
                 youtubelink: this.youtubelink,
                 rating: this.rating,
                 thumbnail: this.thumbnail,
-                screenshots: this.screenshots,
+                screenshots: this.screenshots.split(','),
                 price: this.price,
             });
             newPackage.$save(function(response) {
