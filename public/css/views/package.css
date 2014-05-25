@@ -31,9 +31,10 @@
 .packagesList tr {
 	border-bottom: 1px solid #E1E1E1;	
 	background-color: #FFFFFF;	
+	height: 55px;
 }
 .packagesList th, .packagesList td {
-	padding: 5px 10px;
+	padding: 0 10px;
 }
 .packagesList .name {
 	text-transform: uppercase;
@@ -62,6 +63,9 @@
 	background-color: #FFFFFF;
 	padding: 20px;
 	width: 90%;
+}
+.packageView .info .editBtn {
+	float: right;
 }
 .packageView .media {
 	width: 90%;

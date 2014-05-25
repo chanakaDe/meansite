@@ -65,11 +65,14 @@ angular.module('mean').config(['$routeProvider',
             templateUrl: 'views/packages/list.html'
         }).
         when('/packages/create', {
-            templateUrl: 'views/packages/create.html'
+            templateUrl: 'views/packages/update.html'
         }).
         when('/packages/:packageId', {
             templateUrl: 'views/packages/view.html'
         }).
+        when('/packages/:packageId/edit', {
+            templateUrl: 'views/packages/update.html'
+        }).    
         otherwise({
             redirectTo: '/'
         });

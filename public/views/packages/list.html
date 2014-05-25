@@ -16,17 +16,11 @@
                     </td>
                     <td>{{package.author}}</td>
                     <td>{{package.description}}</td>
-                    <td>{{package.summary}}</td>
                     <td>
                         <span data-ng-if="package.command" class="consoleText oneLine">$ {{package.command}}</span>
                     </td>
                     <td>
-                        <a href="{{package.npmlink}}">
-                            <img src="/img/package/npmLink.jpg">
-                        </a>
-                    </td>
-                    <td>
-                        <a href="{{package.githublink}}">
+                        <a href="{{package.githublink}}" data-ng-if="package.githublink">
                             <img src="/img/package/githubLink.jpg">
                         </a>
                     </td>
@@ -38,12 +32,6 @@
                         <img src="/img/package/grayStar.jpg">
                         <!-- {{package.rating}} -->
                     </td>
-                    <td>
-                         <img height="40" ng-src="{{package.thumbnail}}">
-                    </td>
-                    <!-- <td>
-                        <img data-ng-repeat="screenshot in package.screenshots" height="40" ng-src="{{screenshot}}">
-                    </td> -->
                     <td class="price">{{package.price}}</td>
                     
                 </tr>
