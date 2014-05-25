@@ -6,7 +6,7 @@
     <div class="packageView">
     	<div class="col-md-9 ">
             <div class="info">
-                <a class="btn editBtn" href="/#!/packages/{{package._id}}/edit">
+                <a data-ng-show="global.isAdmin" class="btn editBtn" href="/#!/packages/{{package._id}}/edit">
                     <i class="glyphicon glyphicon-edit"></i>
                 </a>
         		<p data-ng-if="package.description">{{package.description}}</p>
