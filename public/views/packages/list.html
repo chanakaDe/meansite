@@ -1,13 +1,13 @@
 <section class="content" data-ng-controller="PackageController" data-ng-init="all()">
     <div class="modulesTopBanner">
-        <h1>Modules</h1>
+        <h1>MEAN Packages</h1>
         <div class="col-xs-3">
-            <input type="text" class="form-control" placeholder="Search Modules" ng-model="modulesFilter">
+            <input type="text" class="form-control" placeholder="Search Packages" ng-model="modulesFilter">
             <span class="glyphicon glyphicon-search"></span>
         </div>
     </div>
     <div class="modulesContent">
-        <h4 class="modulesTitle">All Modules</h4>
+        <h4 class="modulesTitle">All Packages</h4>
         <table class="packagesList">
             <tbody>
                 <tr data-ng-repeat="package in packages | filter:modulesFilter">
