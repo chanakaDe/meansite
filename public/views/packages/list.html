@@ -1,0 +1,54 @@
+<section class="content" data-ng-controller="PackageController" data-ng-init="all()">
+    <div class="modulesTopBanner">
+        <h1>Modules</h1>
+        <div class="col-xs-3">
+            <input type="text" class="form-control" placeholder="Search Modules" ng-model="modulesFilter">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </div>
+    <div class="modulesContent">
+        <h4 class="modulesTitle">All Modules</h4>
+        <table class="packagesList">
+            <tbody>
+                <tr data-ng-repeat="package in packages | filter:modulesFilter">
+                    <td class="name">
+                        <a data-ng-href="#!/packages/{{package._id}}"><b>{{package.name}}</b></a>
+                    </td>
+                    <td>{{package.author}}</td>
+                    <td>{{package.description}}</td>
+                    <td>{{package.summary}}</td>
+                    <td>
+                        <span data-ng-if="package.command" class="consoleText oneLine">$ {{package.command}}</span>
+                    </td>
+                    <td>
+                        <a href="{{package.npmlink}}">
+                            <img src="/img/package/npmLink.jpg">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{package.githublink}}">
+                            <img src="/img/package/githubLink.jpg">
+                        </a>
+                    </td>
+                    <td class="oneLine">
+                        <img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/yellowStar.jpg">
+                        <img src="/img/package/grayStar.jpg">
+                        <!-- {{package.rating}} -->
+                    </td>
+                    <td>
+                         <img height="40" ng-src="{{package.thumbnail}}">
+                    </td>
+                    <!-- <td>
+                        <img data-ng-repeat="screenshot in package.screenshots" height="40" ng-src="{{screenshot}}">
+                    </td> -->
+                    <td class="price">{{package.price}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <a data-ng-show="global.isAdmin" href="#!/packages/create">Create New Package</a>
+    </div>
+</section>
