@@ -6,7 +6,10 @@
     <div class="packageView">
     	<div class="col-md-9 ">
             <div class="info">
-        		<p>{{package.description}}</p>
+                <a class="btn editBtn" href="/#!/packages/{{package._id}}/edit">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+        		<p data-ng-if="package.description">{{package.description}}</p>
                 <p>{{package.summary}}</p>
         		<br/>
                 <span data-ng-if="package.command" class="consoleText">$ {{package.command}}</span>
@@ -21,7 +24,7 @@
                         <div class="screenshot">
                             <img ng-src="{{package.screenshots[0]}}">
                         </div>
-                        <div class="screenshot">
+                        <div class="screenshot" data-ng-if="package.screenshots[1]">
                             <img ng-src="{{package.screenshots[1]}}">
                         </div>
                     </slide1>
@@ -39,23 +42,23 @@
         </div>
         <div class="col-md-3">
     		<div class="moreInfo">
-    			<img height="150" ng-src="{{package.thumbnail}}"><br/>
-    				<div>
-    					<b>RATING</b>
-    					<br/>
-    					<img src="/img/package/yellowStar.jpg">
-                        <img src="/img/package/yellowStar.jpg">
-                        <img src="/img/package/yellowStar.jpg">
-                        <img src="/img/package/yellowStar.jpg">
-                        <img src="/img/package/grayStar.jpg">
-                    </div>
-    	    		<div>
-    	    			<b>PRICE</b>
-    	    			<br/>
-    	    			<span class="price">{{package.price}}</span>
-    	    		</div>
+    			<img data-ng-if="package.thumbnail" height="150" ng-src="{{package.thumbnail}}"><br/>
+				<div data-ng-if="package.rating">
+					<b>RATING</b>
+					<br/>
+					<img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/yellowStar.jpg">
+                    <img src="/img/package/grayStar.jpg">
+                </div>
+	    		<div data-ng-if="package.price">
+	    			<b>PRICE</b>
+	    			<br/>
+	    			<span class="price">{{package.price}}</span>
+	    		</div>
     		</div>
-            <a href="{{package.githublink}}" class="githubForkLink">
+            <a data-ng-if="package.githublink" href="{{package.githublink}}" class="githubForkLink">
                 <img src="/img/package/git-banner.jpg">
             </a>
         </div>
