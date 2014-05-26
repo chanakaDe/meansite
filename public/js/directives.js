@@ -1,5 +1,16 @@
 'use strict';
 
+angular.module('mean.system').directive('stopEvent', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attr) {
+            element.bind(attr.stopEvent, function(e) {
+                e.stopPropagation();
+            });
+        }
+    }
+});
+
 angular.module('mean.system').directive('scrollSpy', function($timeout) {
     return {
         restrict: 'A',

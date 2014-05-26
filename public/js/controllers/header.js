@@ -18,4 +18,11 @@ angular.module('mean.system').controller('HeaderController', ['$scope', '$locati
     };
 
     $scope.isCollapsed = false;
+
+    $scope.openModal = function(modalID, event) {
+        Global.modal.path = "views/dialogs/" + modalID + ".html";
+        Global.modal.class = "open";
+
+        event.stopPropagation();
+    };
 }]);
