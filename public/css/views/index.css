@@ -54,6 +54,8 @@ a.banner-top-download-button:hover {
 }
 .banner-top-border-text a{
   margin-left: 18px;
+  position: relative;
+  z-index: 1;
 }
 .banner-top-border-seperator {
     width: 0px;
@@ -139,7 +141,7 @@ position:fixed;
     margin-top:20px;
     float:right;
 }
-slider { 
+slider {
   position: relative;
   display: inline-block;
   width: 100.5%;
@@ -166,7 +168,7 @@ slider input[type="radio"]:nth-of-type(1) {
   margin-left: 380px;
 }
 
-slide1 { 
+slide1 {
   width: 800px;
   height: 500px;
 }
@@ -200,8 +202,8 @@ slide1 { display: none; }
 }
 [slide-target]:checked:after,
 [slide-target]:checked:before,
-[slide-target]:checked ~ [slide-target] ~ [slide-target]:after { 
-  display: none; 
+[slide-target]:checked ~ [slide-target] ~ [slide-target]:after {
+  display: none;
 }
 
 /* -- slide -- */
