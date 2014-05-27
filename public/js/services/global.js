@@ -8,11 +8,11 @@ angular.module('mean.system').factory('Global', [
             user: window.user,
             //authenticated: !! window.user,
             authenticated: false,
-            isAdmin: false
+            isAdmin: false,
             modal: {
-				class: '',
-				path: ''
-			}
+                class: '',
+                path: ''
+            }
         };
         if (window.user && window.user.roles) {
             _this._data.authenticated = window.user.roles.length;
