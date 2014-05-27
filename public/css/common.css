@@ -427,7 +427,6 @@ footer .footer-right-menu-text {
 }
 
 .icn{
-    
     height: 125px; 
     width: 117px;
     margin: 20px 0 0 57px;
@@ -436,7 +435,6 @@ footer .footer-right-menu-text {
 #icn_fb{
     background:url('/img/support/fb.png');
     background-repeat: no-repeat;
-
 }
 
 #icn_irc{
@@ -447,7 +445,11 @@ footer .footer-right-menu-text {
 #icn_git{
     background:url('/img/support/github.png');
     background-repeat: no-repeat;
+}
 
+#icn_gg{
+    background:url('/img/support/gg.png');
+    background-repeat: no-repeat;
 }
 
 .link{
