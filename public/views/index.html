@@ -1,4 +1,4 @@
-<section data-ng-controller="IndexController">
+<section data-ng-controller="IndexController" data-ng-click="closeModal()">
     <div class="banner-top">
         <div class="container">
             <img class="banner-top-ninja" src="/img/ninja/banner-top-ninja.png" alt="MEAN.IO">
@@ -26,7 +26,7 @@
             </div>
             <div class="banner-top-border-seperator"></div>
             <div class="banner-top-border-text">
-                LATEST COMMIT: <b>{{githubData.updated_at | date: 'MMM d, y'}}</b>
+                LATEST COMMIT: <b>{{githubData.commitDate | date: 'MMM d, y'}}</b>
             </div>
             <div class="banner-top-border-seperator"></div>
             <div class="banner-top-border-text">
@@ -173,6 +173,5 @@
 -->
         </aside>
     	</div>
-		</div>
-
+	</div>
 </section>

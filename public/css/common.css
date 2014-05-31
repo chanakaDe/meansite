@@ -427,7 +427,6 @@ footer .footer-right-menu-text {
 }
 
 .icn{
-    
     height: 125px; 
     width: 117px;
     margin: 20px 0 0 57px;
@@ -436,7 +435,6 @@ footer .footer-right-menu-text {
 #icn_fb{
     background:url('/img/support/fb.png');
     background-repeat: no-repeat;
-
 }
 
 #icn_irc{
@@ -447,7 +445,11 @@ footer .footer-right-menu-text {
 #icn_git{
     background:url('/img/support/github.png');
     background-repeat: no-repeat;
+}
 
+#icn_gg{
+    background:url('/img/support/gg.png');
+    background-repeat: no-repeat;
 }
 
 .link{
@@ -483,3 +485,142 @@ footer .footer-right-menu-text {
     background: url('/img/support/rectangle.png');
 }
 
+/* Lightbox and LEADS form */
+.lightbox {
+    width:70%;
+    height:510px;
+    background:white;
+    top:50px;
+    position:absolute;
+    opacity:0;
+    left:-9999px;
+    z-index:1000;
+    padding:40px;
+    box-shadow:0 0 3px black;
+}
+.lightbox.open {
+    left:220px;
+    opacity:1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation: fold 1000ms; 
+    -webkit-animation-fill-mode: forwards;
+}
+.lightbox .left-side {
+    width:70%;
+    float:left;
+    padding-right:10px;
+    border-right:1px solid #ddd;
+    margin-right:20px;
+    font-family: "open sans", arial, sans-serif;
+    font-size:16px;
+    line-height:190%;
+}
+.lightbox .left-side .tech-logo {
+    margin-bottom:20px;
+}
+.lightbox .close {
+    position:absolute;
+    right:10px;
+    background:blue;
+    top:10px;
+    width:25px;
+    height:25px;
+    text-indent:-9999px;
+    background:url(../img/x.png) no-repeat center;
+    transition:200ms;
+    display: block;
+}
+.lightbox .close:hover {
+    -webkit-transform:rotate(180deg);
+}
+.lightbox .right-side .subtitle {
+    text-transform:uppercase;
+    font-size:15px;
+}
+.lightbox .right-side .infobit {
+    margin-bottom:50px;
+}
+
+.lightbox .right-side blockquote {
+    font-size:22px;
+    margin-top:20px;
+    color:$orange;
+}
+
+.lead {
+    text-transform: uppercase;
+}
+.lead h1{
+    color: $orange;
+}
+#leadForm { 
+    float: left;
+    width: 30%;
+}
+#leadForm b {
+    color: red;
+}
+#leadForm .error-message {
+    color: red;
+    font-size: 0.6em;
+    text-transform: uppercase;
+}
+#leadForm input[type="email"],
+#leadForm input[type="number"],
+#leadForm input[type="text"] {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    height: 50px;
+    line-height: 50px;
+    padding: 10px;
+    width: 300px;
+    margin: 10px 0; 
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    color: #555555;
+    vertical-align: middle;
+}
+#leadForm input[type="number"] {
+    line-height: 30px;
+}
+#leadForm input[type="submit"] {
+    float: left; 
+    border:  none;
+}
+#leadForm input:focus.ng-invalid, 
+#leadForm textarea:focus:invalid, 
+#leadForm select:focus.ng-invalid {
+    border-color: #EE5F5B;
+    color: #B94A48;
+}
+#leadForm input:focus.ng-invalid:focus, 
+#leadForm textarea:focus.ng-invalid:focus, 
+#leadForm select:focus.ng-invalid:focus {
+    border-color: #E9322D;
+    box-shadow: 0 0 6px #F8B9B7;
+}
+input.cta, a.cta {
+    background: none repeat scroll 0 0 #8DC63F;
+    box-shadow: 0 -25px 0 #84C038 inset, 0 1px 1px #5FA231;
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-size: 22px;
+    padding: 15px 50px;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #5FA231;
+    text-transform: uppercase;
+    transition: all 200ms ease 0s;
+}
+.ninja-container {
+    float: right;
+    position: relative;
+}
+.ninja-container .ninja-half {
+    position: absolute;
+    top:5px;
+    left:-19px;
+}
