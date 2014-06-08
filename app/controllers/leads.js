@@ -33,14 +33,45 @@ var mongoose = require('mongoose'),
 			console.log("Got error: " + e.message);
 		});
 
-		var notifier = require('../mailer/notifier');
-		var to = "lior@linnovate.net";
-		var fullName = lead.firstName + ' ' + lead.lastName;
-		var subject =  'New lead from MEAN.io. ' + fullName + ' sent you a lead ';
-		var text = fullName + " sent you a lead, call him/her: " + lead.phone + " or email him/her: " + lead.email + " back."
+		// post to HIGHRISE
+		var post_data = 'sFirstName=' + lead.firstName
+				 + '&sLastName=' + lead.lastName
+				 + '&sPhone=' + lead.phone
+				 + '&sEmail=' + lead.email
+				 + '&staff_comment=' + lead.message;
+		// An object of options to indicate where to post to
+		var post_options = {
+		    host: 'linnovate.net',
+		    port: '80',
+		    path: '/lead-to-highrise',
+		    //auth: 'linnovate:devel',
+		    method: 'POST',
+		    headers: {
+		        'Content-Type': 'application/x-www-form-urlencoded',
+		        'Content-Length': post_data.length
+		    }
+		};
+		// Set up the request
+		var post_req = http.request(post_options, function(res) {
+		    res.setEncoding('utf8');
+		    res.on('data', function (chunk) {
+		        console.log('Response: ' + chunk);
+		    });
+		});
+		// post the data
+		post_req.write(post_data);
+		post_req.end();
 
-		notifier.notify(to, subject, text, text);
-		
+		// send email
+		var mail = require("nodemailer").mail;
+		var fullName = lead.firstName + ' ' + lead.lastName;
+
+		mail({
+		    from: "Linnovate support team <contact@linnovate.net>", // sender address
+		    to: "lior@linnovate.net", // list of receivers
+		    subject: fullName + ' sent you a lead (sent from MEAN.IO)', // Subject line
+		    text: fullName + " sent you a lead, call him/her: " + lead.phone + " or email him/her: " + lead.email + " back.", // plaintext body
+		});
 
 		res.jsonp(lead);
 	}

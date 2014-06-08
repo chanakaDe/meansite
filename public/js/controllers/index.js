@@ -14,7 +14,8 @@ angular.module('mean.system').controller('IndexController', ['$scope', '$http', 
             $scope.githubData.commitDate = commits[0].commit.committer.date;
         });
 
-        $scope.closeModal = function() {
+        // global modal close function
+        Global.closeModal = function() {
             Global.modal.path = '';
             Global.modal.class = '';
         };

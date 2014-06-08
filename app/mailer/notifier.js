@@ -4,8 +4,9 @@
 
 var mongoose = require('mongoose'),
     nodemailer = require('nodemailer'),
-    env = process.env.NODE_ENV || 'development'
-
+    env = process.env.NODE_ENV || 'development',
+    config = require('../../config/config');
+console.log(config);
     /**
      * Notification methods
      */
@@ -22,16 +23,16 @@ var Notifier = {
 
     notify: function(to, subject, text, html, callback) {
         var smtpTransport = nodemailer.createTransport("SMTP", {
-            service: "Gmail",
+            service: config.nodemailer.service,
             auth: {
-                user: "amos@linnovate.net",
-                pass: "amoslinn"
+                user: config.nodemailer.mail,
+                pass: config.nodemailer.pass
             }
         });
 
         // setup e-mail data with unicode symbols
         var mailOptions = {
-            from: "Amos Haviv ✔ <amos@linnovate.net>", // sender address
+            from: config.nodemailer.from, // sender address
             to: to, // list of receivers
             subject: subject, // Subject line
             text: text, // plaintext body
