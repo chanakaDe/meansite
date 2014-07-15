@@ -4,16 +4,29 @@
 
 <h2>File Structure</h2>
 
-<p class="alert alert-info">From v0.3.2 the mean project has become a lot more modular with the introduction of packages. As a result when possible application specific code should be part of a custom package allowing you to easily upgrade your mean version in the future</p>
+<p class="alert alert-info">From v0.4.0 all the application code has been integrated into a number of packages. Each package uses MVC on the server and client. Below is the overall file structure as well as the package file structure</p>
 
-<h4>Server side code</h4>
+<h4>Project File Structure</h4>
+<p> <p>
+<pre>
+config
+--- env						# Configuration Files
+----- all.js                # General configuration for all environments
+----- development.js		# Development specific
+----- production.js			# Production specific
+--- express.js				# Express middleware
+
+packages					# See Below
+</pre>
+
+<h4>Server side package code</h4>
 <p> <p>
 <p>All of the Server side code resides in the <strong>/server</strong> directory.</p>
 <span class="label label-info">Server</span>
 <pre>
 server
 --- config						# Configuration Files (see below)
---- controllers                                         # Server side logic goes here
+--- controllers                 # Server side logic goes here
 --- models						# schema models goes here
 --- routes						# rest api endpoints routing - here
 --- views						# swig based html rendering - here
@@ -22,21 +35,18 @@ server
 
 <section id="file-structure-client">
 
-<h4>Client side code</h4>
+<h4>Client side package code</h4>
 <p> <p>
 <p>All of the Client side code resides in the <strong>/public</strong> directory.</p>
 <span class="label label-info">Client</span>
 <pre>
-public
---- articles
---- auth
---- system
----- assets
----- controllers
----- lib
----- routes
----- services
----- views
+server
+--- config						# Configuration Files (see below)
+--- controllers                 # Client side logic goes here
+--- routes						# Angular routes defined here
+--- views						# Angular view files found here
+--- services					# Angular service files found here
+--- directives					# Angular directive files found here
 </pre>
 </section>
 
@@ -45,20 +55,19 @@ public
 
 <h4>Configuration files</h4>
 <p> <p>
-<p>All the configuration code resides in the <strong>server/config</strong> directory.  Different environment configurations (testing, development, production) can be defined within the <strong>env</strong> directory.</p>
+<p>All the configuration code resides in the <strong>/config</strong> directory.  Different environment configurations (testing, development, production) can be defined within the <strong>env</strong> directory.</p>
 <span class="label label-info">Server</span>
 <pre>
 config
---- env
----- all.js
----- development.js
---- config.js
---- express.js
---- passport.js
---- system/
+--- env						# Configuration Files
+----- all.js                # General configuration for all environments
+----- development.js		# Development specific
+----- production.js			# Production specific
+--- express.js				# Express middleware
 </pre>
 
-<p class="alert alert-warning">Limit changing code in express.js and in system/ as it will make upgrading more challenging in the future</p>
+
+<p class="alert alert-warning">Limit changing code in express.js as it will make upgrading more challenging in the future</p>
 
 </section>
 

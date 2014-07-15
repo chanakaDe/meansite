@@ -38,7 +38,12 @@
 	padding: 0 10px;
 }
 .packagesList .name {
+  width:160px;
 	text-transform: uppercase;
+}
+
+.packagesList .pkgauthor {
+	width:120px;
 }
 .packagesList .name a {
 	color: #000000;

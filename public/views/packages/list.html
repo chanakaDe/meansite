@@ -14,8 +14,8 @@
                     <td class="name">
                         <a data-ng-href="#!/packages/{{package._id}}"><b>{{package.name}}</b></a>
                     </td>
-                    <td>{{package.author}}</td>
-                    <td>{{package.description}}</td>
+                    <td class="pkgauthor">{{package.author}}</td>
+                    <td class="description">{{package.description}}</td>
                     <td>
                         <span data-ng-if="package.command" class="consoleText oneLine">$ {{package.command}}</span>
                     </td>
