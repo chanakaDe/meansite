@@ -557,6 +557,14 @@ footer .footer-right-menu-text {
     float: left;
     width: 30%;
 }
+.close-dialog {
+    color: #CCCCCC;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
 #leadForm b {
     color: red;
 }
@@ -567,7 +575,9 @@ footer .footer-right-menu-text {
 }
 #leadForm input[type="email"],
 #leadForm input[type="number"],
-#leadForm input[type="text"] {
+#leadForm input[type="text"],
+#leadForm input[type="tel"],
+#leadForm textarea {
     border-radius: 0;
     text-transform: uppercase;
     font-size: 1.1em;
@@ -575,13 +585,29 @@ footer .footer-right-menu-text {
     line-height: 50px;
     padding: 10px;
     width: 300px;
-    margin: 10px 0; 
+    margin: 4px 0; 
     background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
     color: #555555;
     vertical-align: middle;
+}
+#leadForm input[type]#phonePrefix {
+    width: 85px;
+    matgin-right: 5px;
+}
+#leadForm input[type]#phone {
+    width: 210px;
+}
+#leadForm .phone-fields {
+    white-space: nowrap;
+}
+#leadForm textarea {
+    resize: none;
+    height: auto;
+    line-height: 30px;
+    height: 85px;
 }
 #leadForm input[type="number"] {
     line-height: 30px;
