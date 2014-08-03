@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://localhost/meansite',
     app: {
-        name: 'MEAN.io - A Fullstack Javascript Framework'
+        name: 'MEAN IO - A Fullstack Javascript Framework'
     },
     facebook: {
         clientID: 'APP_ID',

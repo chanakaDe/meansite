@@ -67,10 +67,10 @@ var mongoose = require('mongoose'),
 		var fullName = lead.firstName + ' ' + lead.lastName;
 
 		mail({
-		    from: "Linnovate support team <contact@linnovate.net>", // sender address
-		    to: "lior@linnovate.net", // list of receivers
+		    from: "MEAN.io leads <contact@linnovate.net>", // sender address
+		    to: "contact@linnovate.io", // list of receivers
 		    subject: fullName + ' sent you a lead (sent from MEAN.IO)', // Subject line
-		    text: fullName + " sent you a lead, call him/her: " + lead.phone + " or email him/her: " + lead.email + " back.", // plaintext body
+		    text: fullName + " sent you a lead, call him/her: " + lead.phone + " or email him/her: " + lead.email + " back. " + lead.message , // plaintext body
 		});
 
 		res.jsonp(lead);
