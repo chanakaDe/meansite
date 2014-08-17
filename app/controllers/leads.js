@@ -59,16 +59,16 @@ var mongoose = require('mongoose'),
 		    });
 		});
 		// post the data
-		post_req.write(post_data);
-		post_req.end();
-
+	//	post_req.write(post_data);
+	//	post_req.end();
+		console.log('Did not sent to crm');
 		// send email
 		var mail = require("nodemailer").mail;
 		var fullName = lead.firstName + ' ' + lead.lastName;
 
 		mail({
 		    from: "MEAN.io leads <contact@linnovate.net>", // sender address
-		    to: "contact@linnovate.io", // list of receivers
+		    to: "lior@linnovate.net", // list of receivers
 		    subject: fullName + ' sent you a lead (sent from MEAN.IO)', // Subject line
 		    text: fullName + " sent you a lead, call him/her: " + lead.phone + " or email him/her: " + lead.email + " back. " + lead.message , // plaintext body
 		});
