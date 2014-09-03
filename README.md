@@ -28,12 +28,12 @@ $ npm install -g bower
 ## Quick Install
   The quickest way to get started with MEAN is to ..
 
-    $ sudo npm install -g meanio   # get the cli
-    $ mean init appName            # create the first app
-    $ cd appName && npm install    # Install dependencies
-    $ mean package myModule        # Scaffold you're own module
-    $ mean install mean-tokens     # Or download one from our repo...
-    $ grunt                        # Run you App.
+    $ sudo npm install -g mean-cli  # get the cli
+    $ mean init appName             # create the first app
+    $ cd appName && npm install     # Install dependencies
+    $ mean package myModule         # Scaffold you're own module
+    $ mean install mean-tokens      # Or download one from our repo...
+    $ grunt                         # Run you App.
 
   Then open a browser and go to:
 
