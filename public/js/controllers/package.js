@@ -1,7 +1,8 @@
 'use strict';
-angular.module('mean').controller('PackageController', ['$scope', '$routeParams', '$location', '$sce', 'Global','Packages',
-    function($scope, $routeParams, $location, $sce, Global, Packages) {
+angular.module('mean').controller('PackageController', ['$scope', '$routeParams', '$location', '$sce', 'Global','Packages', 'marked',
+    function($scope, $routeParams, $location, $sce, Global, Packages, marked) {
         $scope.global = Global;
+        marked.setOptions({gfm: true});
 
         $scope.all = function() {
             Packages.query(function(packages) {
@@ -19,7 +20,7 @@ angular.module('mean').controller('PackageController', ['$scope', '$routeParams'
             } else {
                 $scope.package = new Packages();
             }
-            
+
         };
 
         $scope.getEmbedYTVideo = function(ytLink) {
@@ -31,6 +32,14 @@ angular.module('mean').controller('PackageController', ['$scope', '$routeParams'
                 }
                 return $sce.trustAsResourceUrl(video_id);
             }
+            return "";
+        }
+
+        $scope.getReadmeLink = function(readmeLink) {
+            if(readmeLink) {
+                return $sce.trustAsResourceUrl(readmeLink);
+            }
+
             return "";
         }
 

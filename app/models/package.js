@@ -29,6 +29,7 @@ var PackageSchema = new Schema({
     	required: true
     },
     command: String,
+    readmelink: String,
     npmlink: String,
     githublink: String,
     youtubelink: String,
