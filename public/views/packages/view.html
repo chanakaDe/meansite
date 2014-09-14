@@ -13,13 +13,16 @@
                 <p>{{package.summary}}</p>
         		<br/>
                 <span data-ng-if="package.command" class="consoleText">$ {{package.command}}</span>
+                <div class="readme" data-ng-if="package.readmelink">
+                    <div marked ng-include="getReadmeLink(package.readmelink)"></div>
+                </div>
         	</div>
 
             <div class="media" data-ng-if="package.youtubelink || package.screenshots[0]">
                 <h4 class="modulesTitle">Media Gallery</h4>
                 <iframe data-ng-if="package.youtubelink" ng-src="{{getEmbedYTVideo(package.youtubelink)}}" allowfullscreen frameborder="0"></iframe>
                 <slider data-ng-if="package.screenshots[0]">
-                    <input slide-target type="radio" name="groupName" checked> 
+                    <input slide-target type="radio" name="groupName" checked>
                     <slide1>
                         <div class="screenshot">
                             <img ng-src="{{package.screenshots[0]}}">
@@ -28,7 +31,7 @@
                             <img ng-src="{{package.screenshots[1]}}">
                         </div>
                     </slide1>
-                    <input ng-repeat-start="screenshot in package.screenshots" ng-if="$index >= 2 && $index % 2 == 0" slide-target type="radio" name="groupName"> 
+                    <input ng-repeat-start="screenshot in package.screenshots" ng-if="$index >= 2 && $index % 2 == 0" slide-target type="radio" name="groupName">
                     <slide1 ng-repeat-end ng-if="$index >= 2 && $index % 2 == 0">
                         <div class="screenshot">
                             <img ng-src="{{screenshot}}">
@@ -63,5 +66,5 @@
             </a>
         </div>
     	<div style="clear:both;"></div>
-    </div>    
+    </div>
 </section>
