@@ -19,6 +19,7 @@
     font-family:'Bitter' serif;
     text-shadow: 1px 1px 1px #555;
     font-size: 3em;
+    text-align: left;
 }
 .banner-top-subtitle {
     margin: 20px 0;

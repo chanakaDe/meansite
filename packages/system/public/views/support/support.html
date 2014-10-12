@@ -1,0 +1,122 @@
+<section id="docs" class="content">
+    <section class="container">
+        <div class="col-md-2">
+            <div data-ng-include="'/system/views/support/supportbar.html'"></div>
+        </div>
+        <section class="col-md-10 col-md-offset-2">
+            <h2>Community Support</h2>
+            <div id="Facebook_support" class="support">
+
+                <div class="icn" id="icn_fb">
+                </div>
+                <h3>Facebook</h3>
+
+                <p>We have a group that hangs around in facebook discussing various mean oriented topics and just having
+                    direct non-formal communication.
+                    <!-- <p> --><br>Join us at the </p>
+
+                <div id="link_fb" class="link"><a href="https://www.facebook.com/groups/mean.io/">mean.io facebook
+                    group</a></div>
+                <div class="inner-link-anchor" id="facebook"></div>
+            </div>
+
+            <div id="IRC_support" class="support">
+                <div class="icn" id="icn_irc">
+                </div>
+                <h3>IRC</h3>
+
+                <p>For core discussions and global trivia, swing back to our IRC channel on freenode.net - #mean.io</p>
+
+                <div class="inner-link-anchor" id="irc"></div>
+            </div>
+
+            <div id="GitHub_support" class="support">
+                <div class="icn" id="icn_git">
+                </div>
+                <h3>GitHub</h3>
+
+                <p>For issues, bugs and pull-requests (bring it on!) open an issue in our
+
+                <div id="link_github" class="link"><a href="http://github.com/linnovate/mean">github repository</a>
+                </p></div>
+            <div class="inner-link-anchor" id="github"></div>
+            </div>
+
+            <div id="GoogleGroup_support" class="support">
+                <div class="icn" id="icn_gg">
+                </div>
+                <h3>Google Groups</h3>
+
+                <p>Similar to the Facebook group, a for mean-related questions and non-issues, post a topic on our
+
+                <div id="link_googlegroup" class="link"><a href="https://groups.google.com/forum/#!forum/meanio">mean.io
+                    google group</a>
+                </p></div>
+            <div class="inner-link-anchor" id="googlegroup"></div>
+            </div>
+
+            <h2 style="clear: both;">Commercial Support</h2>
+
+            <div class="commercial_support">
+                <p>We at <a href="http://linnovate.net">Linnovate</a> have developed mean.io initially to scratch our
+                    own itch but now to help developers and organizations around the work - <strong>GET MEAN.</strong>
+                </p>
+                We provide the following services..
+
+                <h3>MEAN custom development</h3>
+
+                <div class="inner-link-anchor" id="meandev"></div>
+                <p>We provide end-to-end development for mean based projects, We've had excellent track record and
+                    because of mean's elegence and power we are able to complete the project on time and on budget.
+                    For more info visit - <a href="http://meanleanstartupmachine.com">THE MEAN-LEAN-STARTUP-MACHINE</a>
+                </p>
+
+                <h3>Coming Soon! - Support Subscription</h3>
+
+                <div class="inner-link-anchor" id="monthly"></div>
+                <p>We provide mail and private IRC support for your ongoing mean project.</p>
+
+                <h3>Coming Soon! - MEAN Hosting</h3>
+
+                <div class="inner-link-anchor" id="hosting"></div>
+                <p>We provide affordable, secure and scalable web hosting of mean apps - coming soon!</p>
+            </div>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="inner-link-anchor" id="faq"></div>
+            <ol>
+                <li><h3>"Error: failed to connect to [localhost:27017]"</h3>
+
+                    MongDB isn't running, please run it before you run grunt...
+                    Consider MongoDB a program that needs to be running before you can run grunt on your MEAN project.
+                    Follow these instructions here for mongodb installation:
+                    http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/ Manual Installation is the only
+                    manner I could get things working
+
+                    I also needed to be in /usr/local/bin before I could fire mongod Once mongod is running in your
+                    terminal window, open a different terminal window and cd to the directory where your MEAN project is
+                    located.
+
+                    There you can run a grunt command and avoid the dreaded warning: [nodemon] app crashed - waiting for
+                    file changes before starting...
+
+                    At that point, you can navigate to http://localhost:3000
+                </li>
+
+                <li><h3>"I run grunt but see a white screen with nothing in it"</h3>
+                    Either you havn't run npm install or it in turn did not trigger bower install
+                </li>
+                <li><h3>"I run grunt as documented but get a command line not found"</h3>
+                    Install grunt-cli globally - npm install grunt-cli -g
+                </li>
+                <li><h3>"I get Error: EMFILE, too many open files” in npm install."</h3>
+                    See http://otaqui.com/blog/1618/how-to-fix-error-emfile-too-many-open-files-from-yeoman-and-npm/
+                    or - set your ulimit higher if your using a mac ulimit -n 1024
+                </li>
+            </ol>
+        </section>
+        <!-- end of cold-md-10 -->
+    </section>
+    <!-- end of container -->
+</section> <!-- end of content -->

@@ -1,0 +1,31 @@
+<div class="lead" data-ng-controller="LeadsController">
+	<span class="close-dialog" ng-click="global.closeModal()">x</span>
+	<h1>hire your ninja!</h1>
+	<p>please enter your info and we'll contact you</p>
+	<form id="leadForm" name="leadForm" novalidate data-ng-submit="send(lead);">
+		<!-- <span class="error-message" data-ng-show="leadForm.firstName.$invalid && leadForm.firstName.$dirty">Please Fill First Name</span> -->
+		<input type="text" required placeholder="Name*" id="name" name="name" data-ng-model="lead.name" data-ng-focus="changeNinjaStage(1);">
+		
+		<div class="phone-fields">
+			<!-- <span class="error-message" data-ng-hide="leadForm.phone.$valid">Please Fill Valid Number</span> -->
+			<input type="tel" maxlength="4" placeholder="+###" data-ng-model="lead.phonePrefix" data-ng-focus="changeNinjaStage(2);" id="phonePrefix" name="phonePrefix">
+			<input type="tel" placeholder="Phone" data-ng-model="lead.phone" data-ng-focus="changeNinjaStage(2);" id="phone" name="phone" />
+		</div>
+
+		<!-- <span class="error-message" data-ng-hide="leadForm.email.$valid">Please Fill Valid Email</span> -->
+		<input type="email" placeholder="Email*" data-ng-model="lead.email" data-ng-focus="changeNinjaStage(3);" required id="email" name="email">
+
+		<textarea placeholder="Message" data-ng-model="lead.message" data-ng-focus="changeNinjaStage(4);" id="message" name="message"></textarea>
+
+		<input type="submit" value="Submit" class="cta" data-ng-disabled="!leadForm.$valid">
+		<div class="clearfix"></div>
+		<span class="error-message" data-ng-show="leadForm.firstName.$error.required || leadForm.lastName.$error.required || leadForm.email.$error.required">Please fill all fields</span>
+		<span class="error-message" data-ng-show="leadForm.phone.$error.required && !(leadForm.firstName.$error.required || leadForm.lastName.$error.required || leadForm.email.$error.required)">Please fill a valid number</span>
+		<span class="error-message" data-ng-show="!leadForm.$error.required && leadForm.$error.email">Please fill a valid email</span>
+	</form>
+
+	<div class="ninja-container" data-ng-show="ninja.stage">
+		<img src="/system/assets/img/ninja-full.jpg" alt="Never Seen a NINJA?!">
+		<img class="ninja-half" data-ng-src="/system/assets/img/ninja-half-{{ninja.stage}}.jpg" alt="Fill The Form!">
+	</div>
+</div>

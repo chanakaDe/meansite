@@ -416,7 +416,7 @@ footer .footer-right-menu-text {
 #quickstart h4 {margin-top:20px;font-size:1.6em; float:left;margin-bottom: 10px;}
 #quickstart .banner-top-subtitle{float:left;}
 
-.support{
+.col-md-10 .support{
     float: left;
     width: 275px;
     text-align: center;
@@ -653,4 +653,10 @@ input.cta, a.cta {
 
 .thanks-container {
     text-align:center;
+}
+.navbar-inverse .navbar-nav > li > a{
+    color: #fff;
+}
+.nav-docs .nav li a, .nav-docs h3 a{
+    cursor: pointer;
 }
