@@ -10,11 +10,9 @@
     </section>
     {% endif %}
     <section class="content">
-        <section class="container">
             {% block content %}{% endblock %}
-        </section>
     </section>
+    <footer data-ng-include="'/system/views/footer.html'"></footer>
     {% include '../includes/foot.html' %}
 </body>
-
 </html>
