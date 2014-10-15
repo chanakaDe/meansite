@@ -1,0 +1,15 @@
+<section id="docs" class="content" data-ng-controller="WikidocsController">
+    <section class="container">
+        <div class="col-md-2">
+            <div>
+                <nav class="nav-docs nav-wiki" role="complementary" ng-include="wikiMenu">
+                </nav>
+            </div>
+        </div>
+        <section class="col-md-10 col-md-offset-2">
+            <h2>{{wikiTitle}}</h2>
+
+            <div ng-include="wikiPage"></div>
+        </section>
+    </section>
+</section>

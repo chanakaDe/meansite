@@ -660,3 +660,7 @@ input.cta, a.cta {
 .nav-docs .nav li a, .nav-docs h3 a{
     cursor: pointer;
 }
+
+#docs .nav-wiki {
+    margin-left: -70px !important;
+}
