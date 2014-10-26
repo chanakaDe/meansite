@@ -25,6 +25,8 @@ Packages.register(function(app, auth, database) {
   });
   
   Packages.aggregateAsset('css', 'packages.css');
+  Packages.aggregateAsset('js', '../lib/angular-marked/angular-marked.min.js');
+  Packages.aggregateAsset('js', '../lib/marked/lib/marked.js');
 
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
