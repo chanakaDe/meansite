@@ -3,7 +3,6 @@
 angular.module('mean.wikidocs').controller('WikidocsController', ['$scope', 'Global',
 	function($scope, Global) {
 		$scope.global = Global;
-		//$scope.wikiMenu = 'wikidocs/navigation';
 		$scope.wikiMenu = 'wikidocs/home';
 		$scope.wikiPage = window.location.hash.replace('#!','');
 		$scope.wikiTitle = decodeURIComponent(window.location.hash.replace('#!/wikidocs/',''));
