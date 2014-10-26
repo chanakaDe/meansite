@@ -1,0 +1,42 @@
+<section class="content" data-ng-controller="PackageController" data-ng-init="all()">
+    <div class="modulesTopBanner">
+        <h1>MEAN Packages</h1>
+        <div class="col-xs-3">
+            <input type="text" class="form-control" placeholder="Search Packages" ng-model="modulesFilter">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </div>
+    <div class="modulesContent">
+        <h4 class="modulesTitle">All Packages</h4>
+        <table class="packagesList">
+            <tbody>
+                <tr data-ng-repeat="package in packages | filter:modulesFilter">
+                    <td class="name">
+                        <a data-ng-href="#!/packages/{{package._id}}"><b>{{package.name}}</b></a>
+                    </td>
+                    <td class="pkgauthor">{{package.author}}</td>
+                    <td class="description">{{package.description}}</td>
+                    <td>
+                        <span data-ng-if="package.command" class="consoleText oneLine">$ {{package.command}}</span>
+                    </td>
+                    <td>
+                        <a href="{{package.githublink}}" data-ng-if="package.githublink">
+                            <img src="/system/assets/img/package/githubLink.jpg">
+                        </a>
+                    </td>
+                    <td class="oneLine">
+                        <img src="/system/assets/img/package/yellowStar.jpg">
+                        <img src="/system/assets/img/package/yellowStar.jpg">
+                        <img src="/system/assets/img/package/yellowStar.jpg">
+                        <img src="/system/assets/img/package/yellowStar.jpg">
+                        <img src="/system/assets/img/package/grayStar.jpg">
+                        <!-- {{package.rating}} -->
+                    </td>
+                    <td class="price">{{package.price}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <a data-ng-show="global.isAdmin" href="#!/packages/create">Create New Package</a>
+    </div>
+</section>
