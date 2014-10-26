@@ -30,7 +30,7 @@ module.exports = function (Wikidocs, app, auth, database) {
                     local = false;
                 }
                 return '<a href="' + (local ? '#!/wikidocs/' : '') + href + (title ? '" title="' + title : '') + '">' + text + '</a>';
-            grunt };
+            };
             var html = marked(body, {
                 renderer: renderer
             });
