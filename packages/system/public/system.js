@@ -75,7 +75,7 @@ angular.module('mean.system').directive('minHeight', function ($window) {
         };
         scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
             if (newValue) {
-                $(element).css('min-height', newValue.h - 250);
+                $('.content').css('min-height', newValue.h - 241);
             }
         }, true);
     }
