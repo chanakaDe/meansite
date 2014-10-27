@@ -1,0 +1,114 @@
+<section>
+ <h2>CLI Overview</h2>
+
+ <p>The MEAN CLI is a simple Command Line Interface for installing and managing MEAN applications. As a core package of the mean.io project, it provides a number of useful tools to make MEAN development easier, such as: scaffolding, module creation and admin, status checks, and user role admin.</p>
+
+	<p>The MEAN CLI is available via npm as <code>meanio</code>. See the installation section for details.</p>
+
+</section>
+
+<section id="cli-installation">
+ <h2>Installation</h2>
+
+	<p>The MEAN CLI should be installed as a global npm package.</p>
+
+ <pre>
+ $ [sudo] npm install -g meanio
+ </pre>
+
+	<p class="alert alert-success">Congratulations you now have the MEAN CLI installed!</p>
+
+</section>
+
+<section id="cli-help">
+ <h2>Help</h2>
+
+	<p>Help is readily available with the CLI. Any of the following will provide a list of all available <code>mean</code> commands.</p>
+	<pre>
+	$ mean
+	$ mean --help
+	$ mean help
+	</pre>
+
+	<p><code>mean help</code> can also be used in conjunction with any command to get more information about that particular functionality. For example, try <code>mean help init</code> to see the options for init</p>
+	<pre>
+	$ mean help [command]
+	</pre>
+
+</section>
+
+<section id="cli-init">
+ <h2>Scaffolding a MEAN Project</h2>
+
+	<p>To create a new MEAN app, run <code>mean init</code>. Name for the application is optional. If no name is provided, "mean" is used. The MEAN project will be cloned from GitHub into a directory of the application name.</p>
+	<pre>
+	$ mean init [name]
+	$ cd [name] &amp;&amp; npm install
+	</pre>
+
+	<p class="alert alert-info">Note: <a href="http://git-scm.com/downloads">git</a> must be installed for this command to work properly.</p>
+</section>
+
+<section id="cli-docs">
+ <h2>Docs</h2>
+
+	<p>A simple shortcut to open the mean documentation in your default browser.</p>
+	<pre>
+	$ mean docs
+	</pre>
+
+</section>
+
+<section id="cli-modules">
+ <hr />
+	<p class="alert alert-warning">All of the remaining of the commands must be run from the root folder of your MEAN application.</p>
+ <h2>Contrib Packages</h2>
+
+	<p>Contrib MEAN packages can be installed or uninstalled via the CLI. Also, currently installed modules can be viewed with the <code>list</code> command.</p>
+	<pre>
+	$ mean list
+	$ mean install &lt;module&gt;
+	$ mean uninstall &lt;module&gt;
+	</pre>
+
+	<p class="alert alert-info">Mean packages installed via the installer are found in <i>/node_modules</i></p>
+
+</section>
+
+<section id="cli-packages">
+ <h2>Scaffolding Custom Packages</h2>
+
+	<p>The CLI provides a scaffolding function to create (or remove) your own MEAN Packages. For more information, see the packages page.</p>
+	<pre>
+	$ mean package &lt;name&gt;
+	</pre>
+	<p>To remove, use the <code>-d</code> (or <code>--delete</code>) flag.</p>
+	<pre>
+	$ mean package -d &lt;name&gt;
+	</pre>
+	<p class="alert alert-info">Mean packages are created in <i>/packages</i></p>
+	<p class="alert alert-warning">Mean versions prior to 0.3.2 store packages in /node_modules</p>
+</section>
+
+<section id="cli-status">
+ <h2>Status</h2>
+
+	<p>Check the database connection for a particular environment (e.g. development (default), test, production) and make sure that the meanio command line version is up to date.</p>
+	<pre>
+	$ mean status
+	</pre>
+
+</section>
+
+<section id="cli-users">
+ <h2>Users</h2>
+
+	<p>Information can be display for a specific customer via <code>mean user email</code>. Email is required. User roles can be assigned or removed with the <code>--addRole (or -a)</code> and <code>--removeRole (or -r)</code> options, respectively.
+	<p>For example, the <i>Admin</i> role is required to edit tokens.</p>
+	<pre>
+	$ mean user &lt;email&gt;
+	$ mean user &lt;email&gt; --addRole &lt;role&gt;
+	$ mean user &lt;email&gt; --removeRole &lt;role&gt;
+	</pre>
+
+</section>

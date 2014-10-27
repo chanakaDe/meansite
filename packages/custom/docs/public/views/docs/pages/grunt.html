@@ -1,0 +1,37 @@
+<h2>Tools</h2>
+<h3>Grunt</h3>
+<p>Grunt is a great tool for automating your JavaScript tasks. The ecosystem is huge, containing many common tasks you can use in your daily development process.</p>
+<p>To configure grunt you start with the gruntfile.js file, where you define the tasks you want to run. We start with two basic tasks:</p>
+<ol>
+    <li>task 1</li>
+    <li>task 2</li>
+</ol>
+
+
+<h4>Default</h4>
+<p>The default task is the task that runs when you type 'grunt' in your command-line, the default task consists of three sub-tasks:
+</p>
+<ol>
+    <li>
+        <strong>JSHint:</strong>The linter task that keep your JavaScript code free of common mistakes and syntax errors.</li>
+    <li>
+        <strong>Watch:</strong>This watches your file system for changes and automatically reloads the application whenever you change certain files.</li>
+    <li>
+        <strong>Nodemon:</strong>This runs your Node.js application using nodemon. Please notice that the last two tasks are wrapped with another task called Concurrent to keep the application continuously running.
+    </li>
+</ol>
+
+<h4>Test</h4>
+<p>This task runs when you type 'grunt test' in your command-line, the test task consists of three sub-tasks:
+</p>
+<ol>
+    <li>
+        <strong>env:test :</strong>This is a simple task that changes the NODE_ENV global environment variable to 'test'.</li>
+
+    <li>
+        <strong>mochaTest:</strong>This runs the mocha server tests that are located in the app/tests folder.
+    </li>
+    <li>
+        <strong>karma:unit</strong>
+    </li>This uses the karma test runner to run the AngularJS unit tests.
+</ol>

@@ -1,0 +1,162 @@
+<div ng-class="{'wrapper':slide === true , 'no-wrapper': slide === false }">
+
+<section id="getting-started-overview">
+<h2>Getting Started</h2>
+<p> <p>
+<p>The mean.io docs are designed to give you the tools to be up and running quickly while still providing a good
+understanding of the technologies used, the design philosophy and usage information. The documentation project is ongoing and never ending so feel free to let us know you feel needs to be added or if there is anything
+that is not clear. Enjoy!</p>
+
+<p class="alert alert-info">The label <span class="label label-info">Server</span> indicates server side code</p>
+<p class="alert alert-info">The label <span class="label label-info">Client</span> indicates client side code</p>
+</section>
+
+<section id="getting-started-installation">
+  <h2>Installation</h2>
+  <div class="inner-link-anchor" id="installation"></div>
+  <p>Installation is a two 2 minute process and will give you all the components you need to get started.</p>
+  <style>#install-procedure { height: 110px;font-size:16px;}</style>
+  <div id="install-procedure" ui-ace="{ mode:'text', theme:'monokai', showGutter:false}" readonly="true">
+  > sudo npm install -g meanio@latest  // Get the mean cmdline
+  > mean init myApp                    // create your first app
+  > cd myApp && npm install            // Install dependencies
+  > grunt                              // Launch mean
+  </div>
+
+  <p class="alert alert-success">Congratulations! You are now a MEAN developer</p>
+
+</section>
+
+
+<section id="getting-started-prereq">
+
+<h2>PreRequisites</h2>
+
+<p>MEAN is an acronym for MongoDB, Express, AngularJs and NodeJs. Our install process does a lot, but you still need some basic environement setup to use MEAN.</p>
+<strong><a href="http://nodejs.org/">Node.js</a></strong>
+<p>Download and Install Node.js</p>
+<strong><a href="http://www.mongodb.org/">MongoDB</a></strong>
+<p>Download and Install MongoDB - Make sure it's running on the default port (27017).</p>
+<strong><a href="https://www.npmjs.org/">NPM</a></strong><p>Node.js package manager, should already be installed as part of Node.js.</p>
+<strong><a href="http://bower.io/">Bower</a></strong><p>Web package manager, installing Bower is simple when you have npm: <code>npm i -g bower</code></p>
+</section>
+<p class="alert alert-info">See the technologies section below for more details about the technologies mentioned above</p>
+
+<section id="getting-started-technologies">
+<h2>Technologies</h2>
+<p> <p>
+<section id="mongo">
+<h4><strong>MongoDB</strong></h4>
+<div style="background-color:#402817; padding:10px" class="infograph">
+  <img src="http://media.mongodb.org/logo-mongodb-header.png"></img>
+</div>
+<p>MongoDB is a document database that provides high performance,<br/>
+high availability, and easy scalability.
+</p>
+<h4>Document Database</h4>
+<ul>
+<li>Documents (objects) map nicely to programming language data types.</li>
+<li>Embedded documents and arrays reduce need for joins.</li>
+<li>Dynamic schema makes polymorphism easier.</li>
+</ul>
+<h4>High Performance</h4>
+
+<ul>
+<li>Embedding makes reads and writes fast.</li>
+<li>Indexes can include keys from embedded documents and arrays.</li>
+<li>Optional streaming writes (no acknowledgments).</li>
+</ul>
+<h4>High Availability</h4>
+<ul>
+<li>Replicated servers with automatic master failover.</li>
+</ul>
+<h4>Easy Scalability</h4>
+<li>Automatic sharding distributes collection data across machines.</li>
+<li>Eventually-consistent reads can be distributed over replicated servers.</li>
+</ul>
+</section>
+<hr/>
+
+<h4><strong>Express</strong></h3>
+<section id="express">
+  <h4>Web Applications</h4>
+  <ul>
+  <li><p>Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.</p>
+</li>
+</ul>
+<h4>API</h4>
+<ul>
+<li><p>With a myriad of HTTP utility methods and Connect middleware at your disposal, creating a robust user-friendly API is quick and easy.</p>
+</li>
+</ul>
+<h4>Performance</h4>
+<ul>
+<li><p>Express provides a thin layer of features fundamental to any web application, without obscuring features that you know and love in node.js.</p>
+</li>
+</ul>
+</section>
+<hr/>
+
+<section id="angular">
+<div class="infograph">
+  <img src="http://angularjs.org/img/AngularJS-large.png"></img>
+</div>
+<h4><strong>Angular.js</strong></h4>
+<p>AngularJS lets you write client-side web applications as if you had a smarter browser.<br/>
+It lets you use good old HTML (or HAML, Jade and friends!) as your template language and lets you extend HTML’s syntax to express your application’s components clearly and succinctly.<br/>
+It automatically synchronizes data from your UI (view) with your JavaScript objects (model) through 2-way data binding.<br/>
+To help you structure your application better and make it easy to test, AngularJS teaches the browser how to do dependency injection and inversion of control.<br/>
+Oh yeah and it also helps with server-side communication, taming async callbacks with promises and deferreds; and makes client-side navigation and deeplinking with hashbang urls or HTML5 pushState a piece of cake.<br/>
+The best of all: it makes development fun!</p>
+<ul>
+<li><strong>Web site:</strong><a href="http://angularjs.org">http://angularjs.org</a></li>
+<li><strong>Tutorial:</strong><a href="http://docs.angularjs.org/tutorial">http://docs.angularjs.org/tutorial</a></li>
+</ul>
+</section>
+<hr/>
+
+<section id="nodejs">
+<div class="infograph">
+  <img style="width:300px;" src="http://nodejs.org/images/logo-light.svg"></img>
+</div>
+<h4><strong>Node.js</strong></h4>
+  Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.<br/>
+  Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.<br/>
+</p>
+<li><strong>Web site: </strong><a href="http://nodejs.org">http://nodejs.org</a></li>
+<li><strong>A good place to start learning: </strong><a href="http://www.nodebeginner.org/">http://www.nodebeginner.org/</a></li>
+</section>
+<hr/>
+
+<section id="bootstrap">
+<div class="infograph">
+  <img style="width:300px;" src="http://www.revillweb.com/wp-content/uploads/2013/12/twitter-bootstrap.jpg
+"></img>
+</div>
+<h4><strong>Twitter Bootstrap</strong></h4>
+<h4>Designed for everyone, everywhere.</h4>
+<ul>
+<li><p>Bootstrap makes front-end web development faster and easier.
+    It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.</p>
+</li>
+</ul>
+<h4>Preprocessors</h4>
+<ul>
+<li><p>In addition to vanilla CSS, Bootstrap includes support for the two most popular CSS preprocessors, Less and Sass.</p>
+</li>
+</ul>
+<h4>One framework, every device.</h4>
+<ul>
+<li><p>Bootstrap easily and efficiently scales your project with one code base, from phones to tablets to desktops.</p>
+</li>
+</ul>
+<h4>OComprehensive docs</h4>
+<ul>
+<li><p>With Bootstrap, you get extensive and beautiful documentation with hundreds of live examples, code snippets, and more.</p>
+</li>
+</ul>
+</section>
+</hr>
+
+</section>
+</div>

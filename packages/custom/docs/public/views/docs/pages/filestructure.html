@@ -1,0 +1,86 @@
+<div ng-class="{'wrapper':slide === true , 'no-wrapper': slide === false }">
+
+<section id="file-structure-server">
+
+<h2>File Structure</h2>
+
+<p class="alert alert-info">From v0.4.0 all the application code has been integrated into a number of packages. Each package uses MVC on the server and client. Below is the overall file structure as well as the package file structure</p>
+
+<h4>Project File Structure</h4>
+<p> <p>
+<pre>
+config
+--- env						# Configuration Files
+----- all.js                # General configuration for all environments
+----- development.js		# Development specific
+----- production.js			# Production specific
+--- express.js				# Express middleware
+
+packages					# See Below
+</pre>
+
+<h4>Server side package code</h4>
+<p> <p>
+<p>All of the Server side code resides in the <strong>/server</strong> directory.</p>
+<span class="label label-info">Server</span>
+<pre>
+server
+--- config						# Configuration Files (see below)
+--- controllers                 # Server side logic goes here
+--- models						# schema models goes here
+--- routes						# rest api endpoints routing - here
+--- views						# swig based html rendering - here
+</pre>
+</section>
+
+<section id="file-structure-client">
+
+<h4>Client side package code</h4>
+<p> <p>
+<p>All of the Client side code resides in the <strong>/public</strong> directory.</p>
+<span class="label label-info">Client</span>
+<pre>
+public
+--- config						# Configuration Files (see below)
+--- controllers                 # Client side logic goes here
+--- routes						# Angular routes defined here
+--- views						# Angular view files found here
+--- services					# Angular service files found here
+--- directives					# Angular directive files found here
+</pre>
+</section>
+
+
+<section id="file-structure-config">
+
+<h4>Configuration files</h4>
+<p> <p>
+<p>All the configuration code resides in the <strong>/config</strong> directory.  Different environment configurations (testing, development, production) can be defined within the <strong>env</strong> directory.</p>
+<span class="label label-info">Server</span>
+<pre>
+config
+--- env						# Configuration Files
+----- all.js                # General configuration for all environments
+----- development.js		# Development specific
+----- production.js			# Production specific
+--- express.js				# Express middleware
+</pre>
+
+
+<p class="alert alert-warning">Limit changing code in express.js as it will make upgrading more challenging in the future</p>
+
+</section>
+
+<section id="file-structure-packages">
+
+<h4>Packages code</h4>
+<p> <p>
+<p>All of the Packages code resides in the <strong>/packages</strong> directory. </p>
+	
+<p>The package can be thought of as a mini mean project following the same file structure</p>
+
+<p class="alert alert-info">See the packages section for more details about the packages file structure</p>
+
+
+</section>
+
