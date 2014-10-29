@@ -80,3 +80,21 @@ angular.module('mean.system').directive('minHeight', function ($window) {
         }, true);
     }
 });
+
+angular.module('mean.system').directive('setAutoHide', function () {
+    return {
+        restrict: 'A',
+        link: function (scope, elem, attrs) {
+            //$('.navbar .dropdown').hover(function () {
+            //    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
+            //}, function () {
+            //    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(105)
+            //});
+            $('.nav a').click(function () {
+                if ($('.navbar-toggle').css('display') != 'none') {
+                    $(".navbar-toggle").trigger("click");
+                }
+            });
+        }
+    };
+});

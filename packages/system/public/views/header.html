@@ -1,17 +1,33 @@
-<div class="navbar-inner" data-ng-controller="HeaderController">
+<nav class="navbar navbar-inverse navbar-fixed-top" data-role="navigation" set-auto-hide
+     data-ng-controller="HeaderController">
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="container">
-        <a class="btn btn-navbar collapsed" data-ng-click="isCollapsed = !isCollapsed">
-        </a>
-        <a class="brand" href="/#!/">EAN.IO</a>
-        <ul class="nav navbar-nav dropdown-menu-right">
-            <li><a href="/#!/">Home</a></li>
-            <li><a href="https://github.com/linnovate/mean/wiki/Docs">Documentation</a></li>
-            <li><a href="/#!/packages">Packages</a></li>
-            <li><a href="/#!/release-notes">Release Notes</a></li>
-            <li><a href="/#!/support">Support</a></li>
-            <li><a href="http://blog.mean.io">Blog</a></li>
-            <li><a href data-ng-click="openModal('leads', $event);">Contact</a></li>
-        </ul>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-ng-click="navbarCollapsed = !navbarCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="padding: 15px 15px 15px 0;">
+                <div class="logo pull-left">
+                    <a class="brand" ui-sref="home" mean-token="'site-title'">EAN.IO</a>
+                </div>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" collapse="navbarCollapsed" style="float: right;">
+            <ul class="navbar-nav nav">
+                <li><a href="/#!/">Home</a></li>
+                <li><a href="https://github.com/linnovate/mean/wiki" target="_blank">Documentation</a></li>
+                <li><a href="/#!/packages">Packages</a></li>
+                <li><a href="/#!/release-notes">Release Notes</a></li>
+                <li><a href="/#!/support">Support</a></li>
+                <li><a href="http://blog.mean.io">Blog</a></li>
+                <li><a href data-ng-click="openModal('leads', $event);">Contact</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="lightbox" data-ng-class="global.modal.class" data-ng-include="" src="global.modal.path" data-stop-event="click"></div>
-</div>
+</nav>
+<div class="lightbox" data-ng-class="global.modal.class" data-ng-include="" src="global.modal.path"
+     data-stop-event="click"></div>
