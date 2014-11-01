@@ -27,7 +27,7 @@ module.exports = {
     */
   },
   app: {
-    name: 'MEAN - A Modern Stack - Production'
+    name: 'MEAN.IO - MongoDB, Express, Angularjs Node.js powered fullstack web framework'
   },
   facebook: {
     clientID: 'APP_ID',
