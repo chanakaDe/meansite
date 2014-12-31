@@ -41,11 +41,6 @@ module.exports = function(MeanUser, app, auth, database, passport) {
       });
     });
 
-  // AngularJS route to get config of social buttons
-  app.route('/get-config')
-    .get(function (req, res) {
-      res.send(config);
-    });
 
   // Setting the facebook oauth routes
   app.route('/auth/facebook')
