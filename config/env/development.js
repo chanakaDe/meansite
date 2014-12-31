@@ -6,7 +6,7 @@ module.exports = {
     debug: true
   },
   app: {
-    name: 'MEAN - FullStack JS - Development'
+    name: 'MEAN - Full-Stack JavaScript Using MongoDB, Express, AngularJS, and Node.js.'
   },
   facebook: {
     clientID: 'DEFAULT_APP_ID',
