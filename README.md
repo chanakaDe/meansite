@@ -189,7 +189,7 @@ git push heroku master
 heroku config:set NODE_ENV=production
 ```
 
-## More Information
+## More Information about Mean
   * Visit us at [Linnovate.net](http://www.linnovate.net/).
   * Visit our [Ninja's Zone](http://www.meanleanstartupmachine.com/) for extended support.
 
